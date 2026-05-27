@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Análise Jurídica Gratuita do seu Criadouro — JurisDog. Descubra se seu canil está vulnerável a fiscalização, denúncias e interdição.">
+  <title>Análise de Canil Gratuita — JurisDog | Proteção Jurídica para Criadores</title>
+
+  <!-- META PIXEL AQUI -->
+  <!-- GA4 AQUI -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:       #0a0d09;
+      --dark:     #111410;
+      --darker:   #0d0f0c;
+      --primary:  #2d7a3a;
+      --accent:   #7ec850;
+      --accent-dim: #5fa838;
+      --danger:   #c0392b;
+      --danger-dim: #8b1a13;
+      --text:     #f0f0ec;
+      --muted:    #8a8f85;
+      --border:   #1e2219;
+      --border-accent: #2d7a3a40;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* === GRAIN OVERLAY === */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* === TYPOGRAPHY === */
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.15; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; }
+
+    p { font-size: clamp(0.95rem, 2vw, 1.05rem); }
+
+    /* === LAYOUT === */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    section { padding: 80px 0; }
+
+    /* === BUTTONS === */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #0a0d09;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      padding: 1.1rem 2.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 32px #7ec85055, 0 4px 16px #00000088;
+    }
+    .btn-primary:hover {
+      background: #8fd560;
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px #7ec85080, 0 8px 24px #00000088;
+    }
+
+    /* === DIVIDER === */
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+      margin: 0;
+    }
+
+    /* === BADGE === */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+    }
+    .badge-danger {
+      background: #c0392b18;
+      color: #e74c3c;
+      border: 1px solid #c0392b44;
+    }
+    .badge-accent {
+      background: #7ec85018;
+      color: var(--accent);
+      border: 1px solid #7ec85044;
+    }
+
+    /* === PULSE ANIMATION === */
+    @keyframes pulse-danger {
+      0%, 100% { box-shadow: 0 0 0 0 #c0392b44; }
+      50% { box-shadow: 0 0 0 8px #c0392b00; }
+    }
+    .pulse { animation: pulse-danger 2s infinite; }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fade-up 0.7s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.25s; }
+    .delay-3 { animation-delay: 0.4s; }
+    .delay-4 { animation-delay: 0.55s; }
+    .delay-5 { animation-delay: 0.7s; }
+
+    /* ========================================
+       SECTION 0 — TOP ALERT BAR
+    ======================================== */
+    .alert-bar {
+      background: linear-gradient(90deg, var(--danger-dim), #a93226, var(--danger-dim));
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+      padding: 0.7rem 1rem;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      position: relative;
+      z-index: 100;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+    .alert-bar span { opacity: 0.7; }
+
+    /* ========================================
+       SECTION 1 — HERO
+    ======================================== */
+    #hero {
+      padding: 60px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, #2d7a3a18 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #c0392b0a 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .hero-logo-text span { color: var(--accent); }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-headline {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-headline .danger-word {
+      color: #e74c3c;
+      font-style: normal;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-sub strong { color: var(--text); }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-disclaimer {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .hero-disclaimer::before {
+      content: '🔒';
+      font-size: 0.75rem;
+    }
+
+    /* Scarcity Bar */
+    .scarcity-block {
+      background: #111410;
+      border: 1px solid #c0392b30;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 440px;
+      margin-bottom: 3rem;
+    }
+    .scarcity-icon { font-size: 1.4rem; }
+    .scarcity-text { flex: 1; }
+    .scarcity-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e74c3c;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .scarcity-desc {
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .scarcity-bar {
+      height: 4px;
+      background: #1e2219;
+      border-radius: 2px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+    .scarcity-fill {
+      height: 100%;
+      width: 30%;
+      background: linear-gradient(90deg, #e74c3c, #c0392b);
+      border-radius: 2px;
+      animation: fill-pulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes fill-pulse {
+      from { opacity: 0.7; }
+      to { opacity: 1; }
+    }
+
+    /* Social proof bar */
+    .proof-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .proof-item strong { color: var(--text); font-weight: 700; }
+    .proof-dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* VIDEO PLACEHOLDER */
+    .video-wrapper {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 24px 80px #00000088, 0 0 0 1px var(--border-accent);
+    }
+    .video-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0d0f0c 0%, #111410 100%);
+    }
+    .video-thumbnail-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      z-index: 1;
+    }
+    .play-btn {
+      width: 72px; height: 72px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 0 #7ec85055;
+      animation: play-pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes play-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 #7ec85055; transform: scale(1); }
+      50% { box-shadow: 0 0 0 16px #7ec85010; transform: scale(1.04); }
+    }
+    .play-btn svg { width: 28px; height: 28px; fill: #0a0d09; margin-left: 4px; }
+    .video-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      text-align: center;
+    }
+    .video-sublabel {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .video-tag {
+      position: absolute;
+      top: 1rem; left: 1rem;
+      z-index: 2;
+    }
+
+    /* Hero layout */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    /* ========================================
+       SECTION 2 — DOR
+    ======================================== */
+    #dor {
+      background: var(--dark);
+      padding: 80px 0;
+    }
+    .dor-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+    }
+    .dor-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #e74c3c;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+    .dor-header h2 { margin-bottom: 0.75rem; }
+    .dor-header p { color: var(--muted); font-size: 1.05rem; }
+
+    .dor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .dor-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .dor-card:hover {
+      border-color: #c0392b44;
+      transform: translateY(-2px);
+    }
+    .dor-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .dor-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .dor-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .dor-transition {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.75rem;
+      background: linear-gradient(135deg, #0d0f0c, #111410);
+      border: 1px solid var(--border-accent);
+      border-radius: 10px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dor-transition p {
+      font-size: 1.05rem;
+      color: var(--text);
+      font-style: italic;
+    }
+    .dor-transition strong { color: var(--accent); font-style: normal; }
+
+    /* ========================================
+       SECTION 3 — SOLUÇÃO
+    ======================================== */
+    #solucao { padding: 80px 0; }
+    .solucao-header {
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+    .solucao-header .badge { margin-bottom: 1rem; }
+    .solucao-header h2 { margin-bottom: 0.75rem; }
+    .solucao-header p { color: var(--muted); }
+
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .beneficio-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .beneficio-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+    .beneficio-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+    .beneficio-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+    .beneficio-card p { font-size: 0.83rem; color: var(--muted); }
+
+    .solucao-cta-block {
+      background: linear-gradient(135deg, #111410, #0d0f0c);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .solucao-cta-block::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, #7ec85015 0%, transparent 70%);
+    }
+    .solucao-cta-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      margin-bottom: 0.5rem;
+    }
+    .solucao-cta-block p {
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+      font-size: 0.98rem;
+    }
+    .tag-gratuito {
+      display: inline-block;
+      background: #7ec85022;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.7rem;
+      border-radius: 4px;
+      border: 1px solid #7ec85044;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ========================================
+       SECTION 4 — COMO FUNCIONA
+    ======================================== */
+    #como-funciona {
+      background: var(--dark);
+      padding: 80px 0;
+    }
+    .como-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3.5rem;
+    }
+    .como-header .badge { margin-bottom: 1rem; }
+    .como-header h2 { margin-bottom: 0.75rem; }
+    .como-header p { color: var(--muted); }
+
+    .passos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      position: relative;
+    }
+    .passo-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .passo-card:hover { border-color: var(--border-accent); }
+    .passo-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #7ec85014;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .passo-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .passo-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+    .passo-icon {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    /* ========================================
+       SECTION 5 — PROVA SOCIAL
+    ======================================== */
+    #prova-social { padding: 80px 0; }
+    .ps-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3.5rem;
+    }
+    .ps-header .badge { margin-bottom: 1rem; }
+    .ps-header h2 { margin-bottom: 0.75rem; }
+    .ps-header p { color: var(--muted); }
+
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .depoimento-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .depoimento-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+    }
+    .dep-stars { color: #f1c40f; font-size: 0.85rem; letter-spacing: 0.05em; }
+    .dep-text {
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.75;
+      flex: 1;
+      font-style: italic;
+    }
+    .dep-text::before { content: '"'; color: var(--accent); font-size: 1.5rem; line-height: 0; vertical-align: -0.4em; margin-right: 0.1em; }
+    .dep-text::after { content: '"'; color: var(--accent); font-size: 1.5rem; line-height: 0; vertical-align: -0.4em; margin-left: 0.1em; }
+    .dep-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .dep-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #0a0d09;
+      flex-shrink: 0;
+    }
+    .dep-name { font-weight: 700; font-size: 0.9rem; color: var(--text); }
+    .dep-loc { font-size: 0.78rem; color: var(--muted); }
+
+    .dep-count-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .dep-count-item { text-align: center; }
+    .dep-count-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--accent);
+      display: block;
+    }
+    .dep-count-label { font-size: 0.82rem; color: var(--muted); }
+
+    /* ========================================
+       SECTION 6 — AUTORIDADE
+    ======================================== */
+    #autoridade {
+      background: var(--dark);
+      padding: 80px 0;
+    }
+    .autoridade-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .autoridade-grid { grid-template-columns: 280px 1fr; }
+    }
+    .autoridade-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .autoridade-photo {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a2d1f, #2d7a3a);
+      border: 3px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+    }
+    .autoridade-photo::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid #7ec85033;
+    }
+    .oab-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #7ec85015;
+      border: 1px solid #7ec85033;
+      border-radius: 6px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
+    .autoridade-content .badge { margin-bottom: 1rem; }
+    .autoridade-content h2 { margin-bottom: 0.75rem; }
+    .autoridade-content > p { color: var(--muted); margin-bottom: 1.5rem; line-height: 1.8; }
+
+    .numeros-autoridade {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .numero-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .numero-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+      display: block;
+    }
+    .numero-label { font-size: 0.78rem; color: var(--muted); }
+
+    /* ========================================
+       SECTION 7 — CTA FINAL
+    ======================================== */
+    #cta-final {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-final::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, #2d7a3a0d 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-final-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-final-box .badge { margin-bottom: 1.25rem; }
+    .cta-final-box h2 { margin-bottom: 1rem; }
+    .cta-final-box > p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .vagas-widget {
+      background: var(--dark);
+      border: 1px solid #c0392b30;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+    }
+    .vagas-widget-icon { font-size: 1.8rem; }
+    .vagas-widget-body { flex: 1; }
+    .vagas-widget-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .vagas-progress-bar {
+      height: 6px;
+      background: #1e2219;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 0.4rem;
+    }
+    .vagas-progress-fill {
+      height: 100%;
+      width: 70%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 3px;
+    }
+    .vagas-count {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .vagas-count strong { color: #e74c3c; }
+
+    .selos-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.75rem;
+    }
+    .selo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .selo-icon { font-size: 1rem; }
+
+    .cta-final-disclaimer {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    /* ========================================
+       SECTION 8 — RODAPÉ
+    ======================================== */
+    footer {
+      background: var(--darker);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0 6rem;
+    }
+    @media (min-width: 768px) {
+      footer { padding-bottom: 2.5rem; }
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-legal { font-size: 0.78rem; color: var(--muted); max-width: 520px; line-height: 1.7; }
+
+    /* ========================================
+       MOBILE STICKY CTA
+    ======================================== */
+    .mobile-cta-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, #0a0d09f5, #0a0d09e8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 0.75rem 1.25rem;
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .mobile-cta-bar .btn-primary {
+      width: 100%;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+    .mobile-cta-mini {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .mobile-cta-bar { display: none; }
+    }
+
+    /* ========================================
+       UTILS / RESPONSIVE
+    ======================================== */
+    .text-center { text-align: center; }
+    .text-accent { color: var(--accent); }
+    .text-danger { color: #e74c3c; }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 0; }
+      .numeros-autoridade { grid-template-columns: 1fr 1fr; }
+      .dep-count-bar { gap: 1.5rem; }
+      .vagas-widget { flex-direction: column; text-align: center; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ALERTA TOPO -->
+  <div class="alert-bar" role="alert">
+    ⚠ &nbsp;ATENÇÃO CRIADORES: Fiscalizações em canis aumentaram 340% no Brasil em 2024
+    &nbsp;<span>— Você pode ser o próximo</span>
+  </div>
+
+  <!-- =============================================
+       SEÇÃO 1 — HERO
+  ============================================= -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- COLUNA ESQUERDA: COPY -->
+        <div>
+          <!-- Logo -->
+          <div class="hero-logo fade-up">
+            <span class="hero-logo-text">Juris<span>Dog</span></span>
+          </div>
+
+          <!-- Eyebrow -->
+          <div class="hero-eyebrow fade-up delay-1">
+            <span class="badge badge-danger pulse">
+              ⚠ ALERTA PARA CRIADORES
+            </span>
+          </div>
+
+          <!-- Headline principal -->
+          <h1 class="hero-headline fade-up delay-2">
+            Seu Canil Pode Ser<br>
+            <span class="danger-word">Interditado Amanhã</span> —<br>
+            <em>Você Está Preparado?</em>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="hero-sub fade-up delay-3">
+            Uma denúncia anônima, uma visita da fiscalização, seus cães levados para abrigos.
+            <strong>Isso aconteceu com mais de 1.200 criadores em 2024.</strong>
+            Descubra agora se o seu criadouro está exposto — antes que seja tarde.
+          </p>
+
+          <!-- Scarcity -->
+          <div class="scarcity-block fade-up delay-3">
+            <div class="scarcity-icon">🔥</div>
+            <div class="scarcity-text">
+              <div class="scarcity-label">Vagas Limitadas — Esta Semana</div>
+              <div class="scarcity-desc">Apenas 3 vagas disponíveis para análise gratuita</div>
+              <div class="scarcity-bar"><div class="scarcity-fill"></div></div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="hero-cta-group fade-up delay-4">
+            <a
+              href="https://wa.me/1152415360?text=Quero+minha+análise+gratuita+de+criadouro"
+              class="btn-primary"
+              data-event="cta_click"
+              target="_blank"
+              rel="noopener"
+            >
+              ✅ Quero Minha Análise Gratuita
+            </a>
+            <span class="hero-disclaimer">Gratuito. Sem compromisso. Resposta em até 24h.</span>
+          </div>
+
+          <!-- Proof bar -->
+          <div class="proof-bar fade-up delay-5">
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <strong>+400</strong> criadouros analisados
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <strong>8 anos</strong> de mercado
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <strong>12 estados</strong> atendidos
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA: VÍDEO -->
+        <div class="fade-up delay-2">
+          <div class="video-wrapper" id="videoBlock">
+            <div class="video-tag">
+              <span class="badge badge-danger">▶ ASSISTA ANTES DE SAIR</span>
+            </div>
+            <!-- SUBSTITUIR PELO VÍDEO DO DR. THIAGO -->
+            <!-- Para incorporar: trocar o div abaixo por <iframe width="100%" height="100%" style="position:absolute;inset:0" src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=0&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <div class="video-thumbnail-placeholder">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="video-label">Dr. Thiago Sodré</div>
+              <div class="video-sublabel">A verdade sobre a fiscalização de canis<br>que ninguém te contou</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 2 — AMPLIFICAÇÃO DA DOR
+  ============================================= -->
+  <section id="dor">
+    <div class="container">
+      <div class="dor-header reveal">
+        <div class="dor-eyebrow">⚠ Situação Real de Milhares de Criadores</div>
+        <h2>Seu criadouro está<br><em style="color:#e74c3c">realmente</em> protegido?</h2>
+        <p>Veja o que pode destruir anos de trabalho, dedicação e investimento em uma única tarde — e acontece mais do que você imagina.</p>
+      </div>
+
+      <div class="dor-grid">
+        <div class="dor-card reveal">
+          <div class="dor-icon">🚨</div>
+          <div>
+            <h3>Denúncia anônima sem aviso</h3>
+            <p>Qualquer pessoa pode denunciar seu canil. Vizinhos, concorrentes, ativistas. Sem provas. E a fiscalização vem.</p>
+          </div>
+        </div>
+        <div class="dor-card reveal">
+          <div class="dor-icon">🐾</div>
+          <div>
+            <h3>Animais conduzidos para abrigos</h3>
+            <p>Se seu criadouro for classificado como clandestino, seus cães vão para abrigos e ONGs — e você pode não recuperá-los.</p>
+          </div>
+        </div>
+        <div class="dor-card reveal">
+          <div class="dor-icon">⚖️</div>
+          <div>
+            <h3>Acusação de maus tratos</h3>
+            <p>A lei de maus tratos permite prisão em flagrante. Uma simples criação mal documentada pode se tornar um processo criminal.</p>
+          </div>
+        </div>
+        <div class="dor-card reveal">
+          <div class="dor-icon">🔒</div>
+          <div>
+            <h3>Canil classificado como clandestino</h3>
+            <p>Sem os registros corretos, qualquer criadouro — mesmo organizado — pode ser considerado clandestino pelas autoridades.</p>
+          </div>
+        </div>
+        <div class="dor-card reveal">
+          <div class="dor-icon">💸</div>
+          <div>
+            <h3>Multas que chegam a R$ 100 mil</h3>
+            <p>A legislação ambiental e de bem-estar animal prevê multas pesadas que podem comprometer todo seu patrimônio.</p>
+          </div>
+        </div>
+        <div class="dor-card reveal">
+          <div class="dor-icon">📰</div>
+          <div>
+            <h3>Exposição pública e destruição da reputação</h3>
+            <p>Um caso na mídia ou nas redes sociais destrói décadas de reputação. Clientes somem. Negócio acaba. Não tem volta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dor-transition reveal">
+        <p>
+          A maioria dos criadores que passou por isso <strong>achava que estava tudo certo</strong>.<br>
+          O problema não era a intenção — era o que faltava nos documentos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 3 — APRESENTAÇÃO DA SOLUÇÃO
+  ============================================= -->
+  <section id="solucao">
+    <div class="container">
+      <div class="solucao-header reveal">
+        <span class="badge badge-accent">✅ A Solução</span>
+        <h2>Descubra os Riscos do Seu Criadouro <em style="color:var(--accent)">Antes</em> que a Fiscalização Descubra</h2>
+        <p>A Análise de Canil Gratuita da JurisDog mapeia todas as vulnerabilidades jurídicas do seu criadouro e te mostra o caminho para operar com segurança.</p>
+      </div>
+
+      <div class="beneficios-grid">
+        <div class="beneficio-card reveal">
+          <span class="beneficio-icon">🔍</span>
+          <h3>Diagnóstico Jurídico Completo</h3>
+          <p>Identificamos cada ponto de risco específico do seu criadouro.</p>
+        </div>
+        <div class="beneficio-card reveal">
+          <span class="beneficio-icon">📋</span>
+          <h3>Checklist de Documentação</h3>
+          <p>Você descobre exatamente o que está faltando e o que precisa regularizar.</p>
+        </div>
+        <div class="beneficio-card reveal">
+          <span class="beneficio-icon">🛡️</span>
+          <h3>Proteção Contra Denúncias</h3>
+          <p>Estratégia jurídica para blindar seu canil de denúncias maliciosas.</p>
+        </div>
+        <div class="beneficio-card reveal">
+          <span class="beneficio-icon">📱</span>
+          <h3>Atendimento Direto e Rápido</h3>
+          <p>Você fala diretamente com especialistas em Direito Pet. Sem enrolação.</p>
+        </div>
+        <div class="beneficio-card reveal">
+          <span class="beneficio-icon">🎯</span>
+          <h3>Plano de Ação Personalizado</h3>
+          <p>Receba um roteiro claro do que fazer, na ordem certa, para se regularizar.</p>
+        </div>
+      </div>
+
+      <div class="solucao-cta-block reveal">
+        <div class="tag-gratuito">100% GRATUITO — SEM LETRA MIÚDA</div>
+        <h3>Comece Sua Análise Agora —<br>É Grátis e Leva Menos de 5 Minutos</h3>
+        <p>Basta entrar em contato pelo WhatsApp. Nossa equipe responde em até 24 horas.</p>
+        <a
+          href="https://wa.me/1152415360?text=Quero+minha+análise+gratuita+de+criadouro"
+          class="btn-primary"
+          data-event="cta_click"
+          target="_blank"
+          rel="noopener"
+        >
+          ✅ Quero Minha Análise Gratuita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 4 — COMO FUNCIONA
+  ============================================= -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="como-header reveal">
+        <span class="badge badge-accent">📋 Processo Simples</span>
+        <h2>Como Funciona a Análise</h2>
+        <p>Três passos. Sem burocracia. Sem documentos complicados para enviar agora.</p>
+      </div>
+
+      <div class="passos-grid">
+        <div class="passo-card reveal">
+          <div class="passo-num">01</div>
+          <span class="passo-icon">💬</span>
+          <h3>Você entra em contato</h3>
+          <p>Clique no botão e nos mande uma mensagem pelo WhatsApp. Nossa equipe recebe e já inicia o seu atendimento.</p>
+        </div>
+        <div class="passo-card reveal">
+          <div class="passo-num">02</div>
+          <span class="passo-icon">🔍</span>
+          <h3>Fazemos o diagnóstico</h3>
+          <p>Nosso especialista faz perguntas objetivas sobre seu criadouro para identificar as vulnerabilidades jurídicas.</p>
+        </div>
+        <div class="passo-card reveal">
+          <div class="passo-num">03</div>
+          <span class="passo-icon">📊</span>
+          <h3>Você recebe o resultado</h3>
+          <p>Em até 24h você recebe o mapa completo de riscos e um plano de ação claro para regularizar seu criadouro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 5 — PROVA SOCIAL
+  ============================================= -->
+  <section id="prova-social">
+    <div class="container">
+      <div class="ps-header reveal">
+        <span class="badge badge-accent">⭐ Depoimentos Reais</span>
+        <h2>Criadores que já estavam no risco —<br>e descobriram a tempo</h2>
+        <p>Não é propaganda. São criadores reais que usaram a análise gratuita.</p>
+      </div>
+
+      <div class="depoimentos-grid">
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">
+            Achei que estava tudo regularizado. A análise mostrou que eu não tinha dois documentos fundamentais. Se a fiscalização tivesse aparecido antes, eu poderia ter perdido tudo que construí em 12 anos. A JurisDog salvou meu canil.
+          </p>
+          <div class="dep-author">
+            <div class="dep-avatar">CZ</div>
+            <div>
+              <div class="dep-name">Canil Zavanelas</div>
+              <div class="dep-loc">São Paulo, SP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">
+            Recebi uma denúncia anônima um mês depois de fazer a análise. Mas como já tinha corrigido as falhas com a orientação da JurisDog, a fiscalização veio e foi embora sem problema nenhum. Não tenho palavras para agradecer.
+          </p>
+          <div class="dep-author">
+            <div class="dep-avatar">CD</div>
+            <div>
+              <div class="dep-name">CanilGatil Damyo</div>
+              <div class="dep-loc">Minas Gerais, MG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">
+            Estava criando há 7 anos sem saber que precisava de licenciamento específico para o número de animais que tenho. A análise foi um divisor de águas. Hoje opero com segurança total e sem medo de fiscalização.
+          </p>
+          <div class="dep-author">
+            <div class="dep-avatar">SD</div>
+            <div>
+              <div class="dep-name">Canil Star Dogs</div>
+              <div class="dep-loc">Rio de Janeiro, RJ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-count-bar reveal">
+        <div class="dep-count-item">
+          <span class="dep-count-num">+400</span>
+          <span class="dep-count-label">Criadouros Analisados</span>
+        </div>
+        <div class="dep-count-item">
+          <span class="dep-count-num">12</span>
+          <span class="dep-count-label">Estados Atendidos</span>
+        </div>
+        <div class="dep-count-item">
+          <span class="dep-count-num">98%</span>
+          <span class="dep-count-label">Satisfação dos Clientes</span>
+        </div>
+        <div class="dep-count-item">
+          <span class="dep-count-num">8+</span>
+          <span class="dep-count-label">Anos de Mercado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 6 — AUTORIDADE
+  ============================================= -->
+  <section id="autoridade">
+    <div class="container">
+      <div class="autoridade-grid">
+        <div class="autoridade-photo-wrap reveal">
+          <div class="autoridade-photo">🧑‍⚖️</div>
+          <!-- Substituir pelo: <img src="foto-dr-thiago.jpg" alt="Dr. Thiago Sodré" style="width:200px;height:200px;object-fit:cover;border-radius:50%;border:3px solid var(--accent)"> -->
+          <div class="oab-badge">
+            ⚖️ OAB Inscrito
+          </div>
+        </div>
+
+        <div class="autoridade-content reveal">
+          <span class="badge badge-accent">Sobre o Especialista</span>
+          <h2>Dr. Thiago Sodré</h2>
+          <p>
+            Advogado especializado em Direito Animal e legislação para criadouros com mais de 8 anos de atuação exclusiva no mercado pet.
+            Fundador do Grupo JurisDog, referência nacional em proteção jurídica para criadores de animais de raça.
+          </p>
+          <p>
+            Já analisou mais de 400 criadouros em 12 estados brasileiros e desenvolveu metodologia própria de diagnóstico jurídico que identifica vulnerabilidades antes que a fiscalização as encontre.
+            <strong style="color:var(--text)">Porque criador profissional merece proteção profissional.</strong>
+          </p>
+
+          <div class="numeros-autoridade">
+            <div class="numero-item">
+              <span class="numero-val">400+</span>
+              <span class="numero-label">Criadouros atendidos</span>
+            </div>
+            <div class="numero-item">
+              <span class="numero-val">8</span>
+              <span class="numero-label">Anos de especialização</span>
+            </div>
+            <div class="numero-item">
+              <span class="numero-val">12</span>
+              <span class="numero-label">Estados atendidos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 7 — CTA FINAL
+  ============================================= -->
+  <section id="cta-final">
+    <div class="container">
+      <div class="cta-final-box reveal">
+        <span class="badge badge-danger pulse">⚡ VAGAS LIMITADAS ESTA SEMANA</span>
+        <h2 style="margin-top:1rem">
+          Não Espere a Fiscalização<br>
+          Chegar Primeiro
+        </h2>
+        <p>
+          Cada semana que passa sem proteção jurídica é uma semana que você opera no risco.
+          Uma única denúncia pode ser o fim de tudo. Faça agora, enquanto ainda há vagas gratuitas disponíveis.
+        </p>
+
+        <div class="vagas-widget">
+          <div class="vagas-widget-icon">🔥</div>
+          <div class="vagas-widget-body">
+            <div class="vagas-widget-title">Análises Gratuitas Disponíveis Esta Semana</div>
+            <div class="vagas-progress-bar">
+              <div class="vagas-progress-fill"></div>
+            </div>
+            <div class="vagas-count"><strong>7 de 10 vagas preenchidas</strong> — Apenas 3 restantes</div>
+          </div>
+        </div>
+
+        <a
+          href="https://wa.me/1152415360?text=Quero+minha+análise+gratuita+de+criadouro"
+          class="btn-primary"
+          data-event="cta_click"
+          target="_blank"
+          rel="noopener"
+          style="width:100%;max-width:480px;padding:1.3rem 2rem;font-size:1.1rem"
+        >
+          ✅ Garantir Minha Vaga Gratuita Agora
+        </a>
+
+        <p class="cta-final-disclaimer">Gratuito. Sem compromisso. Resposta em até 24 horas.</p>
+
+        <div class="selos-row">
+          <div class="selo">
+            <span class="selo-icon">⚖️</span>
+            OAB Inscrito
+          </div>
+          <div class="selo">
+            <span class="selo-icon">🔒</span>
+            LGPD — Dados Protegidos
+          </div>
+          <div class="selo">
+            <span class="selo-icon">✅</span>
+            Gratuito e Sem Compromisso
+          </div>
+          <div class="selo">
+            <span class="selo-icon">🐾</span>
+            Especialistas em Direito Pet
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SEÇÃO 8 — RODAPÉ
+  ============================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Juris<span>Dog</span></div>
+        <div class="footer-links">
+          <a href="https://wa.me/1152415360" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/juris.dog" target="_blank" rel="noopener">@juris.dog</a>
+          <a href="mailto:comercial@grupojurisdog.com.br">comercial@grupojurisdog.com.br</a>
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
+        </div>
+        <p class="footer-legal">
+          © 2025 Grupo JurisDog — Todos os direitos reservados.<br>
+          As informações desta página têm caráter informativo e não constituem consultoria jurídica.
+          O atendimento é realizado por profissionais devidamente inscritos na OAB.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta-bar">
+    <a
+      href="https://wa.me/1152415360?text=Quero+minha+análise+gratuita+de+criadouro"
+      class="btn-primary"
+      data-event="cta_click"
+      target="_blank"
+      rel="noopener"
+    >
+      ✅ Análise Gratuita — Falar Agora
+    </a>
+    <span class="mobile-cta-mini">🔒 Gratuito · Sem compromisso · Resposta em 24h</span>
+  </div>
+
+  <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    // === SCROLL REVEAL ===
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // === CTA CLICK TRACKING ===
+    document.querySelectorAll('[data-event="cta_click"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // gtag('event', 'cta_click', { event_category: 'conversion' });
+        // fbq('track', 'Lead');
+        console.log('CTA clicked — evento de conversão registrado');
+      });
+    });
+
+    // === SCARCITY COUNTER (dinâmico por dia da semana) ===
+    (function() {
+      const baseCounts = [3, 4, 3, 2, 4, 3, 3];
+      const today = new Date().getDay();
+      const vagas = baseCounts[today];
+      const descEl = document.querySelector('.scarcity-desc');
+      const countEl = document.querySelector('.vagas-count strong');
+      const fillEl = document.querySelector('.vagas-progress-fill');
+      if (descEl) descEl.textContent = `Apenas ${vagas} vaga${vagas > 1 ? 's' : ''} disponível${vagas > 1 ? 'is' : ''} para análise gratuita`;
+      if (countEl) countEl.textContent = `${10 - vagas} de 10 vagas preenchidas — Apenas ${vagas} restante${vagas > 1 ? 's' : ''}`;
+      if (fillEl) fillEl.style.width = `${(10 - vagas) * 10}%`;
+    })();
+
+    // === MOBILE CTA — ocultar quando já não está no viewport do hero ===
+    const heroSection = document.getElementById('hero');
+    const mobileCta = document.querySelector('.mobile-cta-bar');
+    if (heroSection && mobileCta && window.innerWidth < 768) {
+      mobileCta.style.display = 'none';
+      const showObserver = new IntersectionObserver(
+        ([entry]) => {
+          mobileCta.style.display = entry.isIntersecting ? 'none' : 'flex';
+        },
+        { threshold: 0.3 }
+      );
+      showObserver.observe(heroSection);
+    }
+  </script>
+
+</body>
+</html>
