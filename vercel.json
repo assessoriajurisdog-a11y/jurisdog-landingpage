@@ -1,5 +1,13 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/lp-analise-gratuita-jurisdog.html" }
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "legalizeseugatil.jurisdog.com.br" }],
+      "destination": "/lp-analise-gratuita-gatil-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "destination": "/lp-analise-gratuita-jurisdog.html"
+    }
   ]
 }
