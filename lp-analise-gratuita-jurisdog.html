@@ -349,62 +349,24 @@
       flex-shrink: 0;
     }
 
-    /* VIDEO PLACEHOLDER */
+    /* VIDEO VERTICAL (Shorts 9:16) */
     .video-wrapper {
       background: var(--dark);
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
       position: relative;
-      aspect-ratio: 16/9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      aspect-ratio: 9/16;
+      max-width: 340px;
+      margin: 0 auto;
       box-shadow: 0 24px 80px #00000088, 0 0 0 1px var(--border-accent);
     }
-    .video-wrapper::before {
-      content: '';
+    .video-wrapper iframe {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #0d0f0c 0%, #111410 100%);
-    }
-    .video-thumbnail-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.25rem;
-      z-index: 1;
-    }
-    .play-btn {
-      width: 72px; height: 72px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 0 #7ec85055;
-      animation: play-pulse 2s ease-in-out infinite;
-      flex-shrink: 0;
-    }
-    @keyframes play-pulse {
-      0%, 100% { box-shadow: 0 0 0 0 #7ec85055; transform: scale(1); }
-      50% { box-shadow: 0 0 0 16px #7ec85010; transform: scale(1.04); }
-    }
-    .play-btn svg { width: 28px; height: 28px; fill: #0a0d09; margin-left: 4px; }
-    .video-label {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      text-align: center;
-    }
-    .video-sublabel {
-      font-size: 0.82rem;
-      color: var(--muted);
-      text-align: center;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
     .video-tag {
       position: absolute;
@@ -1088,15 +1050,12 @@
             <div class="video-tag">
               <span class="badge badge-danger">▶ ASSISTA ANTES DE SAIR</span>
             </div>
-            <!-- SUBSTITUIR PELO VÍDEO DO DR. THIAGO -->
-            <!-- Para incorporar: trocar o div abaixo por <iframe width="100%" height="100%" style="position:absolute;inset:0" src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=0&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            <div class="video-thumbnail-placeholder">
-              <div class="play-btn">
-                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <div class="video-label">Dr. Thiago Sodré</div>
-              <div class="video-sublabel">A verdade sobre a fiscalização de canis<br>que ninguém te contou</div>
-            </div>
+            <iframe
+              src="https://www.youtube.com/embed/G07gCTDrlOE?rel=0&modestbranding=1"
+              title="Dr. Thiago Sodré — A verdade sobre a fiscalização de canis"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
 
