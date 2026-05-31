@@ -349,7 +349,7 @@
       flex-shrink: 0;
     }
 
-    /* VIDEO PLACEHOLDER */
+    /* VIDEO VERTICAL (Shorts 9:16) */
     .video-wrapper {
       background: var(--dark);
       border: 1px solid var(--border);
@@ -360,13 +360,13 @@
       max-width: 340px;
       margin: 0 auto;
       box-shadow: 0 24px 80px #00000088, 0 0 0 1px var(--border-accent);
-      cursor: pointer;
     }
-    .video-wrapper::before {
-      content: '';
+    .video-wrapper iframe {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #0d0f0c 0%, #111410 100%);
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
     .video-thumbnail-placeholder {
       position: absolute;
