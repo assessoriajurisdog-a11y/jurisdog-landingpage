@@ -690,6 +690,55 @@
     }
     .dep-count-label { font-size: 0.82rem; color: var(--muted); }
 
+    /* VÍDEOS DE DEPOIMENTO */
+    .videos-dep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .video-dep-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .video-dep-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+    }
+    .video-dep-wrap {
+      position: relative;
+      aspect-ratio: 16/9;
+      width: 100%;
+    }
+    .video-dep-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-dep-info {
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .video-dep-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.8rem; color: #0a0d09;
+      flex-shrink: 0;
+    }
+    .video-dep-name { font-weight: 700; font-size: 0.88rem; color: var(--text); display: block; }
+    .video-dep-loc { font-size: 0.75rem; color: var(--muted); display: block; }
+    .video-dep-stars { color: #f1c40f; font-size: 0.7rem; letter-spacing: 0.05em; }
+
     /* ========================================
        SECTION 6 — AUTORIDADE
     ======================================== */
@@ -1235,6 +1284,66 @@
         <span class="badge badge-accent">⭐ Depoimentos Reais</span>
         <h2>Criadores que já estavam no risco —<br>e descobriram a tempo</h2>
         <p>Não é propaganda. São criadores reais que usaram a análise gratuita.</p>
+      </div>
+
+      <!-- VÍDEOS DE DEPOIMENTO -->
+      <div class="videos-dep-grid">
+        <div class="video-dep-card reveal">
+          <div class="video-dep-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/c5BBzs4oI3c?rel=0&modestbranding=1"
+              title="Depoimento — Canil Zavanelas"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-dep-info">
+            <div class="video-dep-avatar">CZ</div>
+            <div>
+              <span class="video-dep-name">Canil Zavanelas</span>
+              <span class="video-dep-stars">★★★★★</span>
+              <span class="video-dep-loc">São Paulo, SP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-dep-card reveal">
+          <div class="video-dep-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/bIdi7c4nzaU?rel=0&modestbranding=1"
+              title="Depoimento — CanilGatil Damyo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-dep-info">
+            <div class="video-dep-avatar">CD</div>
+            <div>
+              <span class="video-dep-name">CanilGatil Damyo</span>
+              <span class="video-dep-stars">★★★★★</span>
+              <span class="video-dep-loc">Minas Gerais, MG</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-dep-card reveal">
+          <div class="video-dep-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/SDBHl1Xtjzg?rel=0&modestbranding=1"
+              title="Depoimento — Canil Star Dogs"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-dep-info">
+            <div class="video-dep-avatar">CS</div>
+            <div>
+              <span class="video-dep-name">Canil Star Dogs</span>
+              <span class="video-dep-stars">★★★★★</span>
+              <span class="video-dep-loc">Rio de Janeiro, RJ</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="depoimentos-grid">
