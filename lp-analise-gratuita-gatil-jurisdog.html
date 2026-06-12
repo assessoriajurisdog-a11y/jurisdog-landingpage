@@ -1044,6 +1044,54 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* ========================================
+       SEÇÃO FORMULÁRIO DE QUALIFICAÇÃO
+    ======================================== */
+    #formulario { background: var(--dark); padding: 80px 0; }
+    .form-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .form-box h2 { margin: 1rem 0 0.5rem; }
+    .form-box > p { color: var(--muted); margin-bottom: 2rem; }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      text-align: left;
+    }
+    .form-full { grid-column: 1 / -1; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .form-input {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+      width: 100%;
+      -webkit-appearance: none;
+    }
+    .form-input:focus { outline: none; border-color: var(--accent); }
+    .form-input::placeholder { color: var(--muted); opacity: 0.7; }
+    select.form-input { cursor: pointer; }
+    select.form-input option { background: #111410; color: var(--text); }
+    .form-textarea { resize: vertical; min-height: 90px; }
+    .form-submit-wrap { margin-top: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -1117,15 +1165,15 @@
           <div class="proof-bar fade-up delay-5">
             <div class="proof-item">
               <div class="proof-dot"></div>
-              <strong>+400</strong> criadouros analisados
+              <strong>+4.000</strong> criadouros analisados
             </div>
             <div class="proof-item">
               <div class="proof-dot"></div>
-              <strong>8 anos</strong> de mercado
+              <strong>10 anos</strong> de mercado
             </div>
             <div class="proof-item">
               <div class="proof-dot"></div>
-              <strong>12 estados</strong> atendidos
+              <strong>Atendimento em todo Brasil</strong>
             </div>
           </div>
         </div>
@@ -1329,15 +1377,15 @@
           <div class="video-dep-wrap">
             <iframe
               src="https://www.youtube.com/embed/bIdi7c4nzaU?rel=0&modestbranding=1"
-              title="Depoimento — CanilGatil Damyo"
+              title="Depoimento — Gatil Daymio"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
           <div class="video-dep-info">
-            <div class="video-dep-avatar">CD</div>
+            <div class="video-dep-avatar">GD</div>
             <div>
-              <span class="video-dep-name">CanilGatil Damyo</span>
+              <span class="video-dep-name">Gatil Daymio</span>
               <span class="video-dep-stars">★★★★★</span>
               <span class="video-dep-loc">Minas Gerais, MG</span>
             </div>
@@ -1390,9 +1438,9 @@
             Criei gatos por mais de 10 anos achando que estava tudo certo. A análise mostrou que eu não tinha dois registros fundamentais. Se a fiscalização tivesse aparecido antes, eu poderia ter perdido minhas linhagens. A JurisDog salvou meu gatil.
           </p>
           <div class="dep-author">
-            <div class="dep-avatar">CD</div>
+            <div class="dep-avatar">GD</div>
             <div>
-              <div class="dep-name">CanilGatil Damyo</div>
+              <div class="dep-name">Gatil Daymio</div>
               <div class="dep-loc">Minas Gerais, MG</div>
             </div>
           </div>
@@ -1429,19 +1477,19 @@
 
       <div class="dep-count-bar reveal">
         <div class="dep-count-item">
-          <span class="dep-count-num">+400</span>
+          <span class="dep-count-num">+4.000</span>
           <span class="dep-count-label">Criadouros Analisados</span>
         </div>
         <div class="dep-count-item">
-          <span class="dep-count-num">12</span>
-          <span class="dep-count-label">Estados Atendidos</span>
+          <span class="dep-count-num" style="font-size:1.6rem">Brasil</span>
+          <span class="dep-count-label">Atendimento em todo Brasil</span>
         </div>
         <div class="dep-count-item">
           <span class="dep-count-num">98%</span>
           <span class="dep-count-label">Satisfação dos Clientes</span>
         </div>
         <div class="dep-count-item">
-          <span class="dep-count-num">8+</span>
+          <span class="dep-count-num">10+</span>
           <span class="dep-count-label">Anos de Mercado</span>
         </div>
       </div>
@@ -1458,35 +1506,32 @@
       <div class="autoridade-grid">
         <div class="autoridade-photo-wrap reveal">
           <img src="foto-dr-thiago.jpg" alt="Dr. Thiago Sodré" style="width:200px;height:200px;object-fit:cover;object-position:top;border-radius:50%;border:3px solid var(--accent);display:block;">
-          <div class="oab-badge">
-            ⚖️ OAB Inscrito
-          </div>
         </div>
 
         <div class="autoridade-content reveal">
           <span class="badge badge-accent">Sobre o Especialista</span>
           <h2>Dr. Thiago Sodré</h2>
           <p>
-            Advogado especializado em Direito Animal e legislação para criadouros com mais de 8 anos de atuação exclusiva no mercado pet.
-            Fundador do Grupo JurisDog, referência nacional em proteção jurídica para criadores de animais de raça — cães, gatos e aves.
+            Advogado especializado em Direito Animal e legislação para criadouros com mais de 10 anos de atuação exclusiva no mercado pet.
+            Fundador do Grupo JurisDog, referência nacional em segurança e proteção para Criadores de Animais de Raça e Comércio Pet.
           </p>
           <p>
-            Já analisou mais de 400 criadouros em 12 estados brasileiros e desenvolveu metodologia própria de diagnóstico jurídico que identifica vulnerabilidades antes que a fiscalização as encontre.
+            Já analisou mais de 4.000 criadouros em todo Brasil e desenvolveu metodologia própria de diagnóstico jurídico que identifica vulnerabilidades antes que a fiscalização as encontre.
             <strong style="color:var(--text)">Porque criador profissional merece proteção profissional.</strong>
           </p>
 
           <div class="numeros-autoridade">
             <div class="numero-item">
-              <span class="numero-val">400+</span>
+              <span class="numero-val">4.000+</span>
               <span class="numero-label">Criadouros atendidos</span>
             </div>
             <div class="numero-item">
-              <span class="numero-val">8</span>
+              <span class="numero-val">10</span>
               <span class="numero-label">Anos de especialização</span>
             </div>
             <div class="numero-item">
-              <span class="numero-val">12</span>
-              <span class="numero-label">Estados atendidos</span>
+              <span class="numero-val" style="font-size:1.3rem">Brasil</span>
+              <span class="numero-label">Atendimento em todo Brasil</span>
             </div>
           </div>
         </div>
@@ -1497,7 +1542,68 @@
   <div class="divider"></div>
 
   <!-- =============================================
-       SEÇÃO 7 — CTA FINAL
+       SEÇÃO 7 — FORMULÁRIO DE QUALIFICAÇÃO
+  ============================================= -->
+  <section id="formulario">
+    <div class="container">
+      <div class="form-box reveal">
+        <span class="badge badge-accent">📋 Reserve Sua Vaga</span>
+        <h2>Reserve Sua Vaga <em style="color:var(--accent)">Agora</em></h2>
+        <p>Preencha abaixo. Confirmamos o horário em até 2 horas por WhatsApp.</p>
+
+        <form id="formQualificacaoGatil" onsubmit="enviarWhatsAppGatil(event)">
+          <div class="form-grid">
+            <div class="form-group form-full">
+              <label class="form-label">Seu Nome Completo</label>
+              <input type="text" class="form-input" name="nome" placeholder="Ex: Ana Souza" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label">Nome do Gatil</label>
+              <input type="text" class="form-input" name="criadouro" placeholder="Ex: Gatil Estrela" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">E-mail</label>
+              <input type="email" class="form-input" name="email" placeholder="seu@email.com.br" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">WhatsApp com DDD</label>
+              <input type="tel" class="form-input" name="whatsapp" placeholder="(11) 99999-9999" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label">Cidade e Estado</label>
+              <input type="text" class="form-input" name="cidade" placeholder="Ex: Curitiba / PR" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label">Tipo de Operação</label>
+              <select class="form-input" name="operacao" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="Gatil de raça">Gatil de raça</option>
+                <option value="Gatil e Canil">Gatil e Canil</option>
+                <option value="Pet shop / Comércio Pet">Pet shop / Comércio Pet</option>
+                <option value="Hotel de Animais">Hotel de Animais</option>
+                <option value="Outra atividade Pet">Outra atividade Pet</option>
+              </select>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label">Principal Dúvida ou Preocupação</label>
+              <textarea class="form-input form-textarea" name="duvida" placeholder="Ex: meus contratos de venda de filhote..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit-wrap">
+            <button type="submit" class="btn-primary" style="width:100%;max-width:480px;padding:1.3rem 2rem;font-size:1.1rem">
+              ✅ Quero minha análise gratuita →
+            </button>
+            <p style="font-size:0.78rem;color:var(--muted)">🔒 Sem spam · Dados protegidos pela LGPD</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SEÇÃO 8 — CTA FINAL
   ============================================= -->
   <section id="cta-final">
     <div class="container">
@@ -1539,10 +1645,6 @@
 
         <div class="selos-row">
           <div class="selo">
-            <span class="selo-icon">⚖️</span>
-            OAB Inscrito
-          </div>
-          <div class="selo">
             <span class="selo-icon">🔒</span>
             LGPD — Dados Protegidos
           </div>
@@ -1575,7 +1677,7 @@
         <p class="footer-legal">
           © 2025 Grupo JurisDog — Todos os direitos reservados.<br>
           As informações desta página têm caráter informativo e não constituem consultoria jurídica.
-          O atendimento é realizado por profissionais devidamente inscritos na OAB.
+          Os atendimentos são realizados por profissionais especializados.
         </p>
       </div>
     </div>
@@ -1599,6 +1701,24 @@
        JAVASCRIPT
   ============================================= -->
   <script>
+    // === FORMULÁRIO → WHATSAPP ===
+    function enviarWhatsAppGatil(e) {
+      e.preventDefault();
+      const f = e.target;
+      const msg = [
+        'Olá! Quero minha análise gratuita de gatil.',
+        '',
+        'Nome: ' + f.nome.value,
+        'Gatil: ' + f.criadouro.value,
+        'E-mail: ' + f.email.value,
+        'WhatsApp: ' + f.whatsapp.value,
+        'Cidade/Estado: ' + f.cidade.value,
+        'Tipo de operação: ' + f.operacao.value,
+        f.duvida.value ? 'Dúvida: ' + f.duvida.value : ''
+      ].filter(Boolean).join('\n');
+      window.open('https://wa.me/1152415360?text=' + encodeURIComponent(msg), '_blank');
+    }
+
     // === SCROLL REVEAL ===
     const revealObserver = new IntersectionObserver(
       (entries) => {
