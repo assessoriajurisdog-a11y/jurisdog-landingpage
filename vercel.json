@@ -7,6 +7,46 @@
     },
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoDF.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-df-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoSP.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-sp-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "petshopblindadoSP.jurisdog.com.br" }],
+      "destination": "/lp-petshopblindado-sp-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoMG.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-mg-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "petshopblindadoMG.jurisdog.com.br" }],
+      "destination": "/lp-petshopblindado-mg-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoRJ.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-rj-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoPE.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-pe-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoCE.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-ce-jurisdog.html"
+    },
+    {
+      "source": "/",
       "destination": "/lp-analise-gratuita-jurisdog.html"
     }
   ]
