@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubra em poucos minutos quais pontos jurídicos e documentais do seu criadouro merecem atenção — JurisDog.">
+  <title>Seu criadouro está preparado? — JurisDog</title>
+
+  <!--
+    ============================================================
+    HOMOLOGAÇÃO — NÃO PUBLICAR COMO PÁGINA FINAL
+    ============================================================
+    Esta página é a PÁGINA DE CAPTURA do funil "Página de Captura →
+    Webinar Express", construída conforme:
+    "ORDEM DE COMANDO — PÁGINA DE CAPTURA FUNIL JURISDOG.txt"
+
+    STATUS: HOMOLOGAÇÃO / PREVIEW — aguardando aprovação do Dr. Thiago.
+    NÃO é a página final. NÃO deve ser publicada em domínio de produção
+    nem usada em campanha antes de aprovação expressa.
+
+    COPY: toda a copy visível nesta página é PROVISÓRIA (ver seção 9 e 10
+    da ordem). A copy definitiva será entregue pelo projeto de Marketing
+    da JurisDog após o One Pager. Cada bloco de texto provisório está
+    marcado com um comentário "COPY PROVISÓRIA" e mapeado a uma chave
+    lógica do tipo landingCopy.hero.headline (ver bloco <script
+    id="landing-copy-reference"> logo após a abertura do <body> — ele
+    reúne TODOS os textos num único lugar, para localizar e substituir
+    com facilidade quando a copy final chegar).
+
+    Ver RELATORIO_PAGINA_CAPTURA_FUNIL_JURISDOG.md para detalhes de
+    stack, integrações, pendências e instruções de rollback.
+    ============================================================
+  -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Meta Pixel Code (mesmo Pixel já em produção nas demais LPs JurisDog) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2013583722573462');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2013583722573462&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Google tag (gtag.js) — mesmo GA4 já em produção -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFZ96Y7Y8H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JFZ96Y7Y8H');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:       #0a0d09;
+      --dark:     #111410;
+      --darker:   #0d0f0c;
+      --primary:  #2d7a3a;
+      --accent:   #7ec850;
+      --accent-dim: #5fa838;
+      --danger:   #c0392b;
+      --text:     #f0f0ec;
+      --muted:    #8a8f85;
+      --border:   #1e2219;
+      --border-accent: #2d7a3a40;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      padding-top: 34px; /* espaço reservado para a barra de homologação fixa */
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.15; }
+    h1 { font-size: clamp(1.9rem, 5.5vw, 3rem); font-weight: 900; }
+    h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 700; }
+    h3 { font-size: clamp(1.05rem, 2.5vw, 1.25rem); font-weight: 700; }
+    p { font-size: clamp(0.95rem, 2vw, 1.05rem); }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
+    section { padding: 64px 0; }
+
+    a { color: inherit; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #0a0d09;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      padding: 1.05rem 2.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 32px #7ec85055, 0 4px 16px #00000088;
+      width: 100%;
+      max-width: 420px;
+    }
+    .btn-primary:hover { background: #8fd560; transform: translateY(-2px); }
+    .btn-primary:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+    .btn-primary:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+    .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      background: #7ec85018;
+      color: var(--accent);
+      border: 1px solid #7ec85044;
+    }
+
+    @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fade-up 0.7s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+    .delay-4 { animation-delay: 0.46s; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== BARRA DE HOMOLOGAÇÃO ===== */
+    .homolog-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: #3a2e05;
+      color: #ffd166;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid #ffd16644;
+    }
+
+    /* ===== HERO ===== */
+    #hero { padding: 44px 0 56px; text-align: center; position: relative; overflow: hidden; }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -180px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(circle, #2d7a3a1c 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.3rem; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+    .hero-logo span { color: var(--accent); }
+    .hero-eyebrow-wrap { margin-bottom: 1.25rem; position: relative; z-index: 1; }
+    .hero-headline { margin-bottom: 1rem; position: relative; z-index: 1; }
+    .hero-sub { color: var(--muted); max-width: 560px; margin: 0 auto 2rem; position: relative; z-index: 1; }
+    .hero-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; position: relative; z-index: 1; }
+    .hero-microcopy { font-size: 0.82rem; color: var(--muted); }
+    .proof-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.5rem;
+      margin-top: 2.25rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+    .proof-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--muted); }
+    .proof-item strong { color: var(--text); font-weight: 700; }
+    .proof-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+
+    /* ===== SITUAÇÕES INCÔMODAS (DOR) ===== */
+    #dor { background: var(--dark); }
+    .dor-eyebrow { text-align: center; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 2rem; }
+    .dor-list { display: flex; flex-direction: column; gap: 0.9rem; }
+    .dor-item {
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+    }
+    .dor-item .icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.05rem; }
+    .dor-item p { font-size: 0.95rem; color: var(--text); }
+
+    /* ===== O QUE VOCÊ VAI ENTENDER ===== */
+    #aprender { text-align: center; }
+    .aprender-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; text-align: left; max-width: 560px; margin: 2rem auto 2.25rem; }
+    .aprender-list li { display: flex; gap: 0.75rem; align-items: flex-start; }
+    .aprender-list .check { color: var(--accent); font-weight: 800; flex-shrink: 0; }
+    .aprender-list span.txt { color: var(--text); font-size: 0.98rem; }
+
+    /* ===== AUTORIDADE ===== */
+    #autoridade { background: var(--dark); }
+    .autoridade-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.25rem; }
+    .autoridade-inner img { width: 132px; height: 132px; object-fit: cover; object-position: top; border-radius: 50%; border: 3px solid var(--accent); }
+    .autoridade-inner p { color: var(--muted); max-width: 520px; }
+    .numeros-autoridade {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      max-width: 520px;
+    }
+    @media (min-width: 560px) {
+      .numeros-autoridade { grid-template-columns: repeat(4, 1fr); }
+    }
+    .numero-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 0.5rem; }
+    .numero-val { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--accent); display: block; }
+    .numero-label { font-size: 0.72rem; color: var(--muted); }
+
+    .quote-strip {
+      margin-top: 2rem;
+      max-width: 560px;
+      background: var(--bg);
+      border: 1px solid var(--border-accent);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+    }
+    .quote-strip .stars { color: #f1c40f; font-size: 0.8rem; letter-spacing: 0.05em; }
+    .quote-strip p.text { font-style: italic; color: var(--text); margin: 0.5rem 0 0.6rem; font-size: 0.92rem; }
+    .quote-strip .author { font-size: 0.8rem; color: var(--muted); }
+    .quote-strip .author strong { color: var(--text); }
+
+    /* ===== CAPTURA / FORMULÁRIO ===== */
+    #captura { text-align: center; }
+    .form-box { max-width: 460px; margin: 0 auto; text-align: left; }
+    .form-box h2 { text-align: center; margin-bottom: 0.5rem; }
+    .form-box > p.form-intro { text-align: center; color: var(--muted); margin-bottom: 2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.1rem; }
+    .form-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .form-input {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.9rem 1rem;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem; /* >=16px evita zoom automático no iOS */
+      transition: border-color 0.2s;
+      width: 100%;
+      -webkit-appearance: none;
+      min-height: 48px;
+    }
+    .form-input:focus { outline: none; border-color: var(--accent); }
+    .form-input::placeholder { color: var(--muted); opacity: 0.7; }
+    select.form-input { cursor: pointer; }
+    select.form-input option { background: #111410; color: var(--text); }
+    .form-input.is-invalid { border-color: var(--danger); }
+    .form-error { font-size: 0.78rem; color: #e57368; min-height: 1.1em; }
+    .form-consent { font-size: 0.76rem; color: var(--muted); line-height: 1.6; margin: 0.25rem 0 1.25rem; }
+    .form-consent a { color: var(--accent); text-decoration: underline; }
+    .form-status { min-height: 1.4em; font-size: 0.85rem; text-align: center; margin-top: 0.85rem; }
+    .form-status.success { color: var(--accent); }
+    .form-status.error { color: #e57368; }
+    .form-submit-note { font-size: 0.76rem; color: var(--muted); text-align: center; margin-top: 0.6rem; }
+
+    /* ===== RODAPÉ ===== */
+    footer { background: var(--darker); border-top: 1px solid var(--border); padding: 2rem 0; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; }
+    .footer-logo span { color: var(--accent); }
+    .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-legal { font-size: 0.74rem; color: var(--muted); max-width: 480px; line-height: 1.6; }
+    .footer-whatsapp-discreet { font-size: 0.76rem; color: var(--muted); text-decoration: underline; opacity: 0.85; }
+
+    @media (max-width: 600px) {
+      section { padding: 48px 0; }
+      .container { padding: 0 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra fixa de homologação — remover antes de publicar em produção -->
+  <div class="homolog-bar" role="status">
+    🧪 PRÉVIA INTERNA — copy provisória, aguardando aprovação do Dr. Thiago. Não publicar.
+  </div>
+
+  <!--
+    ============================================================
+    REFERÊNCIA CENTRALIZADA DE COPY (landingCopy)
+    ============================================================
+    Todo texto visível desta página está espelhado aqui, em um único
+    lugar, para localização e substituição rápida quando a copy
+    definitiva do Marketing chegar. Os blocos de HTML abaixo trazem um
+    comentário indicando a chave correspondente (ex.: landingCopy.hero.headline)
+    logo acima do texto real — edite o texto renderizado diretamente no
+    HTML (mantido estático de propósito, por performance/LCP) e depois
+    replique aqui, para manter os dois em sincronia.
+    Este bloco NÃO é executado — é só documentação/instrumento de apoio.
+  -->
+  <script type="application/json" id="landing-copy-reference">
+  {
+    "hero": {
+      "eyebrow": "Para criadores de cães, gatos e outros animais de raça",
+      "headline": "Seu criadouro estaria preparado se uma fiscalização ou denúncia acontecesse amanhã?",
+      "subheadline": "Veja em poucos minutos quais pontos jurídicos e documentais merecem atenção antes que uma pendência vire um problema maior.",
+      "cta": "Assistir Agora",
+      "microcopy": "Conteúdo direto e específico para criadores."
+    },
+    "pain": {
+      "eyebrow": "Situações que você pode reconhecer",
+      "items": [
+        "Você não sabe exatamente quais documentos deveria ter disponíveis.",
+        "Recebe orientações diferentes de profissionais e órgãos diferentes.",
+        "Enquanto ninguém fiscaliza, tudo parece estar funcionando normalmente."
+      ]
+    },
+    "learn": {
+      "title": "No vídeo, você vai entender:",
+      "items": [
+        "quais pontos costumam merecer atenção na estrutura jurídica de um criadouro;",
+        "por que ter apenas alguns documentos não significa necessariamente que toda a operação esteja juridicamente organizada;",
+        "como funciona uma estrutura preventiva de acompanhamento especializada no mercado de criação."
+      ],
+      "cta": "Quero Assistir"
+    },
+    "authority": {
+      "name": "Dr. Thiago Sodré",
+      "bio": "Especialista no segmento jurídico de criadores de animais de raça e idealizador da JurisDog.",
+      "numbers": ["4.000+ criadouros atendidos", "10 anos de especialização", "Atendimento em todo o Brasil", "98% de satisfação"],
+      "quote": {
+        "text": "Achei que estava tudo regularizado. A análise mostrou que eu não tinha dois documentos fundamentais.",
+        "author": "Canil Zavanelas",
+        "location": "São Paulo, SP"
+      }
+    },
+    "capture": {
+      "title": "Liberar o Vídeo",
+      "intro": "Preencha os dados abaixo para assistir agora.",
+      "cta": "Liberar o Vídeo",
+      "consent": "Ao continuar, você concorda em receber contato da JurisDog sobre este conteúdo e soluções relacionadas. Consulte nossa Política de Privacidade."
+    },
+    "footer": {
+      "legal": "As informações desta página têm caráter informativo e não constituem consultoria jurídica. Os atendimentos são realizados por profissionais especializados."
+    }
+  }
+  </script>
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-logo fade-up">Juris<span>Dog</span></div>
+
+      <!-- landingCopy.hero.eyebrow — COPY PROVISÓRIA -->
+      <div class="hero-eyebrow-wrap fade-up delay-1">
+        <span class="badge">Para criadores de cães, gatos e outros animais de raça</span>
+      </div>
+
+      <!-- landingCopy.hero.headline — COPY PROVISÓRIA -->
+      <h1 class="hero-headline fade-up delay-2">
+        Seu criadouro estaria preparado se uma fiscalização ou denúncia acontecesse amanhã?
+      </h1>
+
+      <!-- landingCopy.hero.subheadline — COPY PROVISÓRIA -->
+      <p class="hero-sub fade-up delay-3">
+        Veja em poucos minutos quais pontos jurídicos e documentais merecem atenção antes que uma pendência vire um problema maior.
+      </p>
+
+      <div class="hero-cta-wrap fade-up delay-4">
+        <!-- landingCopy.hero.cta — COPY PROVISÓRIA -->
+        <a href="#captura" class="btn-primary" data-event="cta_click" data-cta-local="hero">
+          ▶ Assistir Agora
+        </a>
+        <!-- landingCopy.hero.microcopy — COPY PROVISÓRIA -->
+        <span class="hero-microcopy">Conteúdo direto e específico para criadores.</span>
+      </div>
+
+      <!-- Prova rápida — números já validados/usados nas demais páginas JurisDog em produção -->
+      <div class="proof-bar fade-up delay-4">
+        <div class="proof-item"><div class="proof-dot"></div><strong>+4.000</strong>&nbsp;criadouros atendidos</div>
+        <div class="proof-item"><div class="proof-dot"></div><strong>10 anos</strong>&nbsp;de atuação</div>
+        <div class="proof-item"><div class="proof-dot"></div><strong>Todo o Brasil</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       SITUAÇÕES INCÔMODAS (AMPLIFICAÇÃO DA DOR — CURTA)
+  ============================================= -->
+  <section id="dor">
+    <div class="container">
+      <!-- landingCopy.pain.eyebrow — texto de transição, provisório -->
+      <div class="dor-eyebrow reveal">Situações que você pode reconhecer</div>
+
+      <!-- landingCopy.pain.items — COPY PROVISÓRIA -->
+      <div class="dor-list">
+        <div class="dor-item reveal">
+          <span class="icon">⚠️</span>
+          <p>Você não sabe exatamente quais documentos deveria ter disponíveis.</p>
+        </div>
+        <div class="dor-item reveal">
+          <span class="icon">⚠️</span>
+          <p>Recebe orientações diferentes de profissionais e órgãos diferentes.</p>
+        </div>
+        <div class="dor-item reveal">
+          <span class="icon">⚠️</span>
+          <p>Enquanto ninguém fiscaliza, tudo parece estar funcionando normalmente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       O QUE VOCÊ VAI ENTENDER
+  ============================================= -->
+  <section id="aprender">
+    <div class="container">
+      <!-- landingCopy.learn.title -->
+      <h2 class="reveal">No vídeo, você vai entender:</h2>
+
+      <!-- landingCopy.learn.items — COPY PROVISÓRIA -->
+      <ul class="aprender-list reveal">
+        <li><span class="check">✓</span><span class="txt">quais pontos costumam merecer atenção na estrutura jurídica de um criadouro;</span></li>
+        <li><span class="check">✓</span><span class="txt">por que ter apenas alguns documentos não significa necessariamente que toda a operação esteja juridicamente organizada;</span></li>
+        <li><span class="check">✓</span><span class="txt">como funciona uma estrutura preventiva de acompanhamento especializada no mercado de criação.</span></li>
+      </ul>
+
+      <!-- landingCopy.learn.cta — COPY PROVISÓRIA -->
+      <a href="#captura" class="btn-primary reveal" data-event="cta_click" data-cta-local="learn">
+        Quero Assistir
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       AUTORIDADE + PROVA SOCIAL CURTA
+  ============================================= -->
+  <section id="autoridade">
+    <div class="container">
+      <div class="autoridade-inner">
+        <span class="badge reveal">Sobre o Especialista</span>
+
+        <img src="foto-dr-thiago.jpg" alt="Dr. Thiago Sodré" class="reveal" loading="lazy">
+
+        <!-- landingCopy.authority.name -->
+        <h2 class="reveal">Dr. Thiago Sodré</h2>
+
+        <!-- landingCopy.authority.bio — texto validado (já usado nas páginas em produção da JurisDog) -->
+        <p class="reveal">
+          Especialista no segmento jurídico de criadores de animais de raça e idealizador da JurisDog.
+        </p>
+
+        <!-- landingCopy.authority.numbers — números já validados/usados nas páginas em produção -->
+        <div class="numeros-autoridade reveal">
+          <div class="numero-item"><span class="numero-val">4.000+</span><span class="numero-label">Criadouros atendidos</span></div>
+          <div class="numero-item"><span class="numero-val">10</span><span class="numero-label">Anos de atuação</span></div>
+          <div class="numero-item"><span class="numero-val" style="font-size:1.05rem">Brasil</span><span class="numero-label">Atendimento nacional</span></div>
+          <div class="numero-item"><span class="numero-val">98%</span><span class="numero-label">Satisfação</span></div>
+        </div>
+
+        <!-- landingCopy.authority.quote — depoimento REAL, trecho verbatim já usado em produção (lp-analise-gratuita-jurisdog.html) -->
+        <div class="quote-strip reveal">
+          <div class="stars">★★★★★</div>
+          <p class="text">"Achei que estava tudo regularizado. A análise mostrou que eu não tinha dois documentos fundamentais."</p>
+          <div class="author"><strong>Canil Zavanelas</strong> — São Paulo, SP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- =============================================
+       CAPTURA
+  ============================================= -->
+  <section id="captura">
+    <div class="container">
+      <div class="form-box">
+        <!-- landingCopy.capture.title -->
+        <h2 class="reveal">Assista Gratuitamente</h2>
+        <!-- landingCopy.capture.intro — COPY PROVISÓRIA -->
+        <p class="form-intro reveal">Preencha os dados abaixo para assistir agora.</p>
+
+        <form id="formCapturaWebinar" novalidate class="reveal">
+          <div class="form-group">
+            <label class="form-label" for="campo-nome">Primeiro nome</label>
+            <input type="text" id="campo-nome" class="form-input" name="nome" placeholder="Ex: Carlos" autocomplete="given-name" required>
+            <div class="form-error" id="erro-nome" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="campo-whatsapp">WhatsApp com DDD</label>
+            <input type="tel" id="campo-whatsapp" class="form-input" name="whatsapp" placeholder="(11) 91234-5678" inputmode="tel" autocomplete="tel" required>
+            <div class="form-error" id="erro-whatsapp" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="campo-plantel">Quantos animais você mantém atualmente no criadouro?</label>
+            <select id="campo-plantel" class="form-input" name="plantel" required>
+              <option value="" disabled selected>Selecione...</option>
+              <option value="1 a 10">1 a 10</option>
+              <option value="11 a 20">11 a 20</option>
+              <option value="21 a 40">21 a 40</option>
+              <option value="41 a 59">41 a 59</option>
+              <option value="60 ou mais">60 ou mais</option>
+            </select>
+            <div class="form-error" id="erro-plantel" aria-live="polite"></div>
+          </div>
+
+          <!-- landingCopy.capture.consent — texto de consentimento (Seção 21 da ordem) -->
+          <p class="form-consent">
+            Ao continuar, você concorda em receber contato da JurisDog sobre este conteúdo e soluções relacionadas.
+            Consulte nossa <a href="https://os.jurisdog.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.
+          </p>
+
+          <!-- landingCopy.capture.cta -->
+          <button type="submit" class="btn-primary" id="btnLiberarVideo" data-event="cta_click" data-cta-local="captura">
+            Liberar o Vídeo
+          </button>
+
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          <p class="form-submit-note">🔒 Dados protegidos pela LGPD · Gratuito · Sem compromisso</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       RODAPÉ
+  ============================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Juris<span>Dog</span></div>
+        <div class="footer-links">
+          <a href="https://instagram.com/juris.dog" target="_blank" rel="noopener">@juris.dog</a>
+          <a href="mailto:comercial@grupojurisdog.com.br">comercial@grupojurisdog.com.br</a>
+          <a href="https://os.jurisdog.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>
+        </div>
+        <!-- landingCopy.footer.legal — texto já usado nas páginas em produção da JurisDog -->
+        <p class="footer-legal">
+          © 2026 Grupo JurisDog — Todos os direitos reservados.<br>
+          As informações desta página têm caráter informativo e não constituem consultoria jurídica.
+          Os atendimentos são realizados por profissionais especializados.
+        </p>
+        <!-- Link discreto — não compete visualmente com o CTA principal (Seção 18 da ordem) -->
+        <a class="footer-whatsapp-discreet" href="https://wa.me/1152423297" target="_blank" rel="noopener">Já é cliente? Fale com a JurisDog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================================
+    // CONFIGURAÇÃO — troque aqui quando a integração real for definida
+    // ============================================================
+    var LEAD_ENDPOINT = ''; // Ex.: 'https://.../api/leads/captura-webinar' — vazio = homologação (só localStorage)
+    var WEBINAR_ROUTE = 'webinar-express-jurisdog.html'; // equivalente ao "/webinar" citado na ordem — ver relatório sobre a rota limpa
+    var TRACKING_ENABLED = true;
+    var LP_VERSION = 'captura-webinar-v1';
+
+    // ============================================================
+    // UTM / ATRIBUIÇÃO — captura e preserva por toda a jornada
+    // ============================================================
+    function lerParametrosAtribuicao() {
+      var params = new URLSearchParams(window.location.search);
+      var chaves = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+      var atribuicao = {};
+      chaves.forEach(function (k) {
+        var v = params.get(k);
+        if (v) atribuicao[k] = v;
+      });
+      return atribuicao;
+    }
+
+    function carregarOuCriarAtribuicao() {
+      var atual = lerParametrosAtribuicao();
+      var temUtmNaUrl = Object.keys(atual).length > 0;
+      var salvaAnterior = {};
+      try {
+        salvaAnterior = JSON.parse(localStorage.getItem('jurisdog_attribution') || '{}');
+      } catch (e) { salvaAnterior = {}; }
+
+      var final = temUtmNaUrl ? atual : salvaAnterior;
+      try {
+        if (temUtmNaUrl) {
+          localStorage.setItem('jurisdog_attribution', JSON.stringify(final));
+          localStorage.setItem('jurisdog_attribution_first_touch_at', new Date().toISOString());
+        }
+      } catch (e) { /* localStorage indisponível — segue sem persistir atribuição */ }
+      return final;
+    }
+
+    var atribuicao = carregarOuCriarAtribuicao();
+
+    function montarQueryStringAtribuicao() {
+      var params = new URLSearchParams(window.location.search);
+      Object.keys(atribuicao).forEach(function (k) {
+        if (!params.has(k)) params.set(k, atribuicao[k]);
+      });
+      return params.toString();
+    }
+
+    // ============================================================
+    // TRACKING — nomes de evento conforme Seção 19 da ordem
+    // ============================================================
+    function trackEvent(nomeEvento, props) {
+      if (!TRACKING_ENABLED) return;
+      props = props || {};
+      try {
+        if (typeof fbq !== 'undefined') {
+          if (nomeEvento === 'Lead') {
+            fbq('track', 'Lead', props);
+          } else {
+            fbq('trackCustom', nomeEvento, props);
+          }
+        }
+      } catch (e) { /* pixel indisponível (bloqueador de anúncios etc.) — não deve quebrar a página */ }
+      try {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', nomeEvento, props);
+        }
+      } catch (e) { /* gtag indisponível — não deve quebrar a página */ }
+      console.log('[tracking]', nomeEvento, props);
+    }
+
+    trackEvent('ViewContent', { content_name: LP_VERSION });
+
+    document.querySelectorAll('[data-event="cta_click"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        trackEvent('cta_click', { local: btn.getAttribute('data-cta-local') || 'desconhecido' });
+      });
+    });
+
+    var leadFormStartDisparado = false;
+    document.querySelectorAll('#formCapturaWebinar input, #formCapturaWebinar select').forEach(function (campo) {
+      campo.addEventListener('focus', function () {
+        if (!leadFormStartDisparado) {
+          leadFormStartDisparado = true;
+          trackEvent('LeadFormStart', { lp_version: LP_VERSION });
+        }
+      });
+    });
+
+    // ============================================================
+    // SCROLL REVEAL
+    // ============================================================
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+
+    // ============================================================
+    // FORMULÁRIO — validação, estados e captura do lead
+    // ============================================================
+    var form = document.getElementById('formCapturaWebinar');
+    var btnSubmit = document.getElementById('btnLiberarVideo');
+    var statusEl = document.getElementById('formStatus');
+    var enviando = false;
+
+    function normalizarDigitos(valor) {
+      return (valor || '').replace(/\D/g, '');
+    }
+
+    function formatarWhatsappAoDigitar(valor) {
+      var d = normalizarDigitos(valor).slice(0, 11);
+      if (d.length <= 2) return d;
+      if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
+      if (d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+      return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+    }
+
+    var campoWhatsapp = document.getElementById('campo-whatsapp');
+    campoWhatsapp.addEventListener('input', function (e) {
+      var cursorNoFim = e.target.selectionEnd === e.target.value.length;
+      e.target.value = formatarWhatsappAoDigitar(e.target.value);
+      if (cursorNoFim) {
+        e.target.selectionStart = e.target.selectionEnd = e.target.value.length;
+      }
+    });
+
+    function validarCampo(id, erroId, mensagemSeInvalido, valido) {
+      var campo = document.getElementById(id);
+      var erroEl = document.getElementById(erroId);
+      var ok = valido(campo.value);
+      campo.classList.toggle('is-invalid', !ok);
+      erroEl.textContent = ok ? '' : mensagemSeInvalido;
+      return ok;
+    }
+
+    function validarFormulario() {
+      var nomeOk = validarCampo('campo-nome', 'erro-nome', 'Informe seu primeiro nome.', function (v) {
+        return v.trim().length >= 2;
+      });
+      var whatsappOk = validarCampo('campo-whatsapp', 'erro-whatsapp', 'Informe um WhatsApp válido com DDD.', function (v) {
+        var d = normalizarDigitos(v);
+        return d.length === 10 || d.length === 11;
+      });
+      var plantelOk = validarCampo('campo-plantel', 'erro-plantel', 'Selecione uma opção.', function (v) {
+        return v.trim().length > 0;
+      });
+      return nomeOk && whatsappOk && plantelOk;
+    }
+
+    // Validação incremental ao sair do campo (não bloqueia digitação)
+    ['campo-nome', 'campo-whatsapp', 'campo-plantel'].forEach(function (id) {
+      document.getElementById(id).addEventListener('blur', function () {
+        if (form.dataset.tentouEnviar === '1') validarFormulario();
+      });
+    });
+
+    function detectarDispositivo() {
+      return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
+    }
+
+    function enfileirarLeadLocal(lead) {
+      try {
+        var fila = JSON.parse(localStorage.getItem('jurisdog_leads_captura_v1') || '[]');
+        fila.push(lead);
+        if (fila.length > 50) fila = fila.slice(fila.length - 50); // evita crescimento ilimitado
+        localStorage.setItem('jurisdog_leads_captura_v1', JSON.stringify(fila));
+        return true;
+      } catch (e) {
+        console.error('[captura] Falha ao registrar lead localmente:', e);
+        return false;
+      }
+    }
+
+    function enviarLeadParaEndpointReal(lead) {
+      if (!LEAD_ENDPOINT) {
+        console.log('[HOMOLOGAÇÃO] Lead capturado (envio real desativado — LEAD_ENDPOINT vazio). Lead registrado apenas em localStorage para fins de teste.', lead);
+        return Promise.resolve({ ok: true, homologacao: true });
+      }
+      return fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      }).then(function (res) {
+        return { ok: res.ok };
+      }).catch(function (err) {
+        console.error('[captura] Falha ao enviar lead ao endpoint real:', err);
+        return { ok: false, erro: err };
+      });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.dataset.tentouEnviar = '1';
+
+      if (enviando) return; // trava contra double-submit
+      if (!validarFormulario()) {
+        statusEl.textContent = 'Revise os campos destacados acima.';
+        statusEl.className = 'form-status error';
+        return;
+      }
+
+      enviando = true;
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = 'Enviando...';
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+
+      var lead = {
+        nome: document.getElementById('campo-nome').value.trim(),
+        whatsapp: document.getElementById('campo-whatsapp').value.trim(),
+        plantel: document.getElementById('campo-plantel').value,
+        timestamp: new Date().toISOString(),
+        origem_url: window.location.href,
+        referrer: document.referrer || null,
+        utms: atribuicao,
+        dispositivo: detectarDispositivo(),
+        landing_page_version: LP_VERSION,
+        consentimento: true,
+        consentimento_texto: document.querySelector('.form-consent').textContent.trim()
+      };
+
+      enfileirarLeadLocal(lead);
+
+      enviarLeadParaEndpointReal(lead).then(function (resultado) {
+        // Não perder o lead mesmo se o envio remoto falhar: já está em localStorage.
+        enviando = false;
+
+        trackEvent('Lead', {
+          lp_version: LP_VERSION,
+          plantel: lead.plantel,
+          integracao_ativa: !!LEAD_ENDPOINT
+        });
+
+        statusEl.textContent = 'Recebemos seus dados! Você será direcionado para o vídeo em instantes...';
+        statusEl.className = 'form-status success';
+        btnSubmit.textContent = 'Enviado ✓';
+
+        var destino = WEBINAR_ROUTE + '?' + montarQueryStringAtribuicao();
+
+        trackEvent('WebinarRedirect', { lp_version: LP_VERSION });
+
+        setTimeout(function () {
+          window.location.href = destino;
+        }, 1200);
+
+        // Fallback manual visível, caso o redirecionamento automático falhe.
+        var linkManual = document.createElement('a');
+        linkManual.href = destino;
+        linkManual.textContent = 'Se não for redirecionado, clique aqui.';
+        linkManual.style.display = 'block';
+        linkManual.style.marginTop = '0.6rem';
+        linkManual.style.color = 'var(--accent)';
+        statusEl.insertAdjacentElement('afterend', linkManual);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Webinar Express JurisDog — em preparação.">
+  <title>Webinar Express — JurisDog (em preparação)</title>
+
+  <!--
+    ============================================================
+    HOMOLOGAÇÃO — ROTA PLACEHOLDER, NÃO É O WEBINAR FINAL
+    ============================================================
+    Equivalente à rota "/webinar" citada na Seção 28 da ordem de comando.
+    Existe só para a página de captura não terminar em um link quebrado
+    enquanto o Webinar Express real não está pronto.
+
+    Quando o vídeo/estrutura real do Webinar Express estiver definida,
+    este arquivo deve ser SUBSTITUÍDO pelo conteúdo real — nunca
+    apontar a página de captura para vídeo inexistente (regra explícita
+    da ordem).
+
+    Rota limpa "/webinar": este arquivo está acessível hoje só pelo
+    nome de arquivo (webinar-express-jurisdog.html), preservando query
+    string (UTMs). Para virar "/webinar" de fato em produção, será
+    necessário UM rewrite em vercel.json (não aplicado agora, ver
+    RELATORIO_PAGINA_CAPTURA_FUNIL_JURISDOG.md):
+      { "source": "/webinar", "destination": "/webinar-express-jurisdog.html" }
+    ============================================================
+  -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Meta Pixel Code (mesmo Pixel já em produção) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2013583722573462');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2013583722573462&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFZ96Y7Y8H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JFZ96Y7Y8H');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0d09; --dark: #111410; --accent: #7ec850;
+      --text: #f0f0ec; --muted: #8a8f85; --border: #1e2219;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 1.25rem 2rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .homolog-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: #3a2e05; color: #ffd166;
+      font-size: 0.72rem; font-weight: 700; text-align: center;
+      padding: 0.5rem 1rem; border-bottom: 1px solid #ffd16644; z-index: 10;
+    }
+    .logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.4rem; margin-bottom: 2rem; }
+    .logo span { color: var(--accent); }
+    .card {
+      max-width: 480px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 1.75rem;
+    }
+    .icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 4vw, 1.9rem); margin-bottom: 0.9rem; }
+    p { color: var(--muted); margin-bottom: 0.75rem; }
+    .debug-box {
+      display: none;
+      margin-top: 2rem;
+      text-align: left;
+      background: var(--bg);
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="homolog-bar">🧪 ROTA EM HOMOLOGAÇÃO — Webinar Express ainda não publicado</div>
+
+  <div class="logo">Juris<span>Dog</span></div>
+
+  <div class="card">
+    <div class="icon">🎬</div>
+    <h1>Recebemos seu cadastro!</h1>
+    <p>O Webinar Express da JurisDog ainda está em fase final de preparação.</p>
+    <p>Assim que estiver disponível, nossa equipe avisa você por WhatsApp.</p>
+    <a class="whatsapp-link" href="https://wa.me/1152423297" target="_blank" rel="noopener">
+      Prefere falar agora com a nossa equipe?
+    </a>
+  </div>
+
+  <div class="debug-box" id="debugBox"></div>
+
+  <script>
+    // Painel de depuração, só visível com ?debug=1 — usado para conferir
+    // se as UTMs sobreviveram ao redirecionamento vindo da página de captura
+    // (critério de aceite da Seção 30 da ordem).
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('debug') === '1') {
+      var box = document.getElementById('debugBox');
+      var linhas = [];
+      params.forEach(function (v, k) { linhas.push(k + ' = ' + v); });
+      box.innerHTML = '<strong>[debug] Parâmetros recebidos nesta rota:</strong><br>' +
+        (linhas.length ? linhas.join('<br>') : '(nenhum parâmetro na URL)');
+      box.style.display = 'block';
+    }
+
+    try {
+      if (typeof fbq !== 'undefined') fbq('trackCustom', 'WebinarPlaceholderView', {});
+      if (typeof gtag !== 'undefined') gtag('event', 'WebinarPlaceholderView', {});
+    } catch (e) { /* pixel/gtag indisponível — não deve quebrar a página */ }
+  </script>
+
+</body>
+</html>
