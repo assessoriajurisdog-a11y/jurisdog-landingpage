@@ -46,6 +46,15 @@
       "destination": "/lp-criadorblindado-ce-jurisdog.html"
     },
     {
+      "source": "/lei-bh",
+      "destination": "/lp-lei-bh-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindadoBH.jurisdog.com.br" }],
+      "destination": "/lp-lei-bh-jurisdog.html"
+    },
+    {
       "source": "/",
       "destination": "/lp-analise-gratuita-jurisdog.html"
     }
