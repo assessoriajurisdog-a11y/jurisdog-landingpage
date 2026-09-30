@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Nova Lei de BH para Criadores — Leis 11.821/2025 e 12.146/2026 | JurisDog</title>
-  <meta name="description" content="A Lei municipal 12.146/2026 alterou a Lei 11.821/2025 de Belo Horizonte: cadastro e licenciamento municipal, ALF e responsável técnico para canil, gatil e criadouro. Em vigor a partir de 23/01/2027. Solicite o diagnóstico de adequação da JurisDog.">
+  <title>Nova Lei de BH para Criadores e Pet Shops — Leis 11.821/2025 e 12.146/2026 | JurisDog</title>
+  <meta name="description" content="A Lei municipal 12.146/2026 alterou a Lei 11.821/2025 de Belo Horizonte: cadastro e licenciamento para canil, gatil e criadouro de cães, gatos, aves, coelhos, roedores e outras espécies, e novas regras de venda para pet shops. Em vigor a partir de 23/01/2027. Solicite o diagnóstico de adequação da JurisDog.">
   <meta name="theme-color" content="#0a0d09">
-  <link rel="canonical" href="https://legalizeseucanil.jurisdog.com.br/lei-bh">
+  <link rel="canonical" href="https://legalizebh.jurisdog.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="JurisDog">
-  <meta property="og:title" content="A lei municipal de Belo Horizonte mudou para quem cria e vende animais">
-  <meta property="og:description" content="Leis 11.821/2025 e 12.146/2026: o que já valia, o que muda em 23/01/2027 e como preparar seu canil, gatil ou criadouro.">
-  <meta property="og:url" content="https://legalizeseucanil.jurisdog.com.br/lei-bh">
-  <meta property="og:image" content="https://legalizeseucanil.jurisdog.com.br/foto-dr-thiago-480.jpg">
+  <meta property="og:title" content="A lei de Belo Horizonte mudou para criadores e pet shops">
+  <meta property="og:description" content="Leis 11.821/2025 e 12.146/2026: cães, gatos, aves, coelhos, roedores e outras espécies. O que já valia, o que muda em 23/01/2027 e como preparar seu criadouro ou seu pet shop.">
+  <meta property="og:url" content="https://legalizebh.jurisdog.com.br/">
+  <meta property="og:image" content="https://legalizebh.jurisdog.com.br/foto-dr-thiago-480.jpg">
 
   <!-- Meta Pixel (mesmo ID das demais LPs da JurisDog) -->
   <script>
@@ -36,7 +36,9 @@
     "mainEntity": [
       {"@type":"Question","name":"Quando as novas regras da Lei 12.146/2026 começam a valer?","acceptedAnswer":{"@type":"Answer","text":"A Lei 12.146/2026 foi publicada no Diário Oficial do Município de Belo Horizonte em 25/09/2026 e entra em vigor 120 dias após a publicação (art. 4º), o que, pela regra de contagem da Lei Complementar federal 95/1998, leva a 23 de janeiro de 2027."}},
       {"@type":"Question","name":"A Lei 12.146/2026 é municipal ou estadual?","acceptedAnswer":{"@type":"Answer","text":"É uma lei municipal de Belo Horizonte, que altera a Lei municipal 11.821/2025. Não se confunde com a Lei estadual de Minas Gerais 25.227/2025, que trata de criadores de cães e gatos de raça em todo o estado."}},
-      {"@type":"Question","name":"Quais animais a lei de BH considera animal doméstico?","acceptedAnswer":{"@type":"Answer","text":"O art. 1º-B, § 1º, menciona cão, gato, coelho, roedor, psitacídeo, passeriforme, galiforme, anseriforme e demais espécies exóticas permitidas pelas normas federais e estaduais pertinentes, respeitadas as instruções normativas do Ibama."}}
+      {"@type":"Question","name":"Quais animais a lei de BH considera animal doméstico?","acceptedAnswer":{"@type":"Answer","text":"O art. 1º-B, § 1º, menciona cão, gato, coelho, roedor, psitacídeo, passeriforme, galiforme, anseriforme e demais espécies exóticas permitidas pelas normas federais e estaduais pertinentes, respeitadas as instruções normativas do Ibama."}},
+      {"@type":"Question","name":"A nova lei de BH vale para pet shops?","acceptedAnswer":{"@type":"Answer","text":"Pet shops e lojas que vendem, doam, expõem, hospedam ou cuidam de animais já estão sujeitos à Lei 11.821/2025, em vigor desde 2025. A Lei 12.146/2026 acrescentou regras de entrega do animal (art. 5º, VII a IX) e o art. 9º-A, que condiciona a venda em estabelecimento comercial às normas sanitárias, ambientais e de bem-estar do Município."}},
+      {"@type":"Question","name":"Pet shop vai poder continuar vendendo animais em BH?","acceptedAnswer":{"@type":"Answer","text":"O art. 9º-A permite a comercialização de animal doméstico em estabelecimento comercial quando observadas as normas sanitárias, ambientais e de bem-estar animal expedidas pelo Município, e diz que ela pode ser gradualmente substituída por feira de adoção promovida ou autorizada pelo poder público. A lei não fixa prazo nem forma para essa substituição."}}
     ]
   }
   </script>
@@ -164,6 +166,49 @@
     .step h3{font-family:'Inter',sans-serif;font-size:1rem;color:var(--accent);margin-bottom:.4rem;}
     .step p{font-size:.9rem;color:var(--muted);}
     .mid-cta{text-align:center;margin-top:2.25rem;}
+    /* Escolha de perfil no topo */
+    .perfis-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.55rem;}
+    .perfis{display:grid;grid-template-columns:1fr;gap:.6rem;max-width:560px;}
+    @media(min-width:520px){.perfis{grid-template-columns:1fr 1fr;}}
+    .perfil{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--text);background:#10190e;border:1.5px solid var(--accent);border-radius:12px;padding:.8rem 1rem;min-height:64px;transition:transform .15s,box-shadow .15s,background .15s;}
+    .perfil:hover{background:#15240f;box-shadow:0 0 22px #7ec85033;transform:translateY(-1px);}
+    .perfil .pi{font-size:1.55rem;line-height:1;flex:none;}
+    .perfil strong{display:block;font-size:1rem;line-height:1.2;}
+    .perfil small{display:block;font-size:.78rem;color:var(--muted);line-height:1.3;margin-top:.15rem;}
+    .perfil .seta{margin-left:auto;color:var(--accent);font-weight:800;}
+    @media(max-width:519px){
+      .perfis{grid-template-columns:1fr 1fr;gap:.5rem;}
+      .perfil{flex-direction:column;align-items:flex-start;gap:.35rem;padding:.7rem .75rem;min-height:0;}
+      .perfil .pi{font-size:1.3rem;}
+      .perfil strong{font-size:.93rem;}
+      .perfil small{font-size:.74rem;}
+      .perfil .seta{display:none;}
+      .hero-sub{margin:.8rem 0 1.1rem;}
+      .hero-eyebrow{margin-bottom:.9rem;}
+    }
+    @media(max-width:380px){
+      #hero h1{font-size:1.62rem;}
+      #hero .hero-top{margin-bottom:1rem;}
+      #hero{padding-top:16px;}
+    }
+    .hero-link{display:inline-block;margin-top:.8rem;font-size:.92rem;font-weight:600;}
+    /* Espécies */
+    .especies{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;}
+    @media(min-width:640px){.especies{grid-template-columns:repeat(3,1fr);}}
+    @media(min-width:980px){.especies{grid-template-columns:repeat(3,1fr);}}
+    .esp{background:var(--darker);border:1px solid var(--border);border-radius:12px;padding:1rem;}
+    .esp .ei{font-size:1.7rem;display:block;margin-bottom:.35rem;line-height:1;}
+    .esp h3{font-family:'Inter',sans-serif;font-size:.98rem;font-weight:800;margin-bottom:.2rem;}
+    .esp p{font-size:.84rem;color:var(--muted);line-height:1.45;}
+    @media(max-width:639px){.esp-ult{grid-column:1/-1;}}
+    .esp-nota{margin-top:1.1rem;font-size:.84rem;color:var(--muted);text-align:center;max-width:760px;margin-left:auto;margin-right:auto;}
+    /* Caminhos por perfil */
+    .caminhos{display:grid;grid-template-columns:1fr;gap:1.25rem;}
+    @media(min-width:900px){.caminhos{grid-template-columns:1fr 1fr;}}
+    .caminho{border:1px solid var(--border-accent);border-radius:14px;padding:1.5rem;background:var(--bg);scroll-margin-top:16px;}
+    .caminho .col-head h3{font-size:clamp(1.25rem,3vw,1.5rem);}
+    .caminho .items li .tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.35rem;}
+    .caminho .btn{width:100%;margin-top:1.25rem;}
 
     /* Autoridade */
     .auth{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;}
@@ -268,15 +313,16 @@
       <div class="hero-grid">
         <div>
           <div class="hero-eyebrow"><span class="badge">Leis municipais 11.821/2025 + 12.146/2026</span></div>
-          <h1 id="titulo">A lei municipal de <em class="hl">Belo Horizonte</em> mudou para quem cria e vende animais.</h1>
+          <h1 id="titulo">A lei de <em class="hl">Belo Horizonte</em> mudou para quem cria e para quem vende animais.</h1>
           <p class="hero-sub">
-            Pela Lei 12.146/2026, reproduzir e vender animais domésticos em BH passa a ser permitido somente a canil, gatil e criadouro <strong>cadastrado e licenciado pela Prefeitura</strong>, com alvará e responsável técnico.
-            <strong>Entenda o que se aplica ao seu criadouro e prepare sua operação com orientação individualizada.</strong>
+            Reproduzir e vender <strong>cães, gatos, aves, coelhos, roedores e outras espécies</strong> em BH passa a exigir <strong>cadastro e licença da Prefeitura</strong>. Pet shops e lojas ganham <strong>novas regras de venda</strong>.
           </p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary js-cta" data-local="hero" href="#formulario">Solicitar diagnóstico de adequação</a>
-            <a class="btn btn-ghost" href="#o-que-mudou">Ver o que mudou</a>
+          <p class="perfis-label" id="perfis-label">Qual é o seu caso?</p>
+          <div class="hero-ctas perfis" role="group" aria-labelledby="perfis-label">
+            <a class="perfil js-perfil" data-perfil="criador" href="#para-criador"><span class="pi" aria-hidden="true">🐾</span><span><strong>Eu crio animais</strong><small>Cães, gatos, aves, coelhos, roedores</small></span><span class="seta" aria-hidden="true">→</span></a>
+            <a class="perfil js-perfil" data-perfil="petshop" href="#para-petshop"><span class="pi" aria-hidden="true">🏪</span><span><strong>Tenho pet shop ou loja</strong><small>Venda, banho e tosa, hotel</small></span><span class="seta" aria-hidden="true">→</span></a>
           </div>
+          <a class="hero-link js-cta" data-local="hero" href="#formulario">Ou solicite direto o diagnóstico de adequação →</a>
           <p class="hero-note">Análise individual do seu caso. Sem respostas genéricas.</p>
         </div>
 
@@ -298,10 +344,33 @@
     </div>
   </section>
 
+  <!-- 1b. ESPÉCIES -->
+  <section id="especies" class="alt" aria-labelledby="h-especies">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="badge">Art. 1º-B, § 1º</span>
+        <h2 id="h-especies">Não é só <em class="hl">cão e gato</em></h2>
+        <p>Para esta lei, “animal doméstico” inclui estas espécies. Quem reproduz ou vende qualquer uma delas em Belo Horizonte deve olhar para as novas regras.</p>
+      </div>
+      <div class="especies">
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🐕</span><h3>Cão</h3><p>Canis de qualquer raça.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🐈</span><h3>Gato</h3><p>Gatis de qualquer raça.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🐇</span><h3>Coelho</h3><p>Coelhos domésticos.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🐹</span><h3>Roedor</h3><p>Hamster, porquinho-da-índia, chinchila, gerbil.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🦜</span><h3>Psitacídeo</h3><p>Família dos papagaios: calopsita, periquito-australiano, agapórnis.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🐦</span><h3>Passeriforme</h3><p>Pássaros como canário, manon e diamante-de-gould.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🐓</span><h3>Galiforme</h3><p>Galinhas ornamentais, codornas, faisões.</p></div>
+        <div class="esp reveal"><span class="ei" aria-hidden="true">🦆</span><h3>Anseriforme</h3><p>Patos, marrecos, gansos.</p></div>
+        <div class="esp esp-ult reveal"><span class="ei" aria-hidden="true">🦎</span><h3>Outras exóticas</h3><p>Demais espécies exóticas permitidas pelas normas federais e estaduais.</p></div>
+      </div>
+      <p class="esp-nota reveal">Os exemplos são ilustrativos. A lei manda respeitar as instruções normativas do Ibama, e espécies silvestres da fauna brasileira têm regras próprias do órgão ambiental. O enquadramento da sua espécie é conferido no diagnóstico.</p>
+    </div>
+  </section>
+
   <div class="divider"></div>
 
   <!-- 2. O QUE MUDOU -->
-  <section id="o-que-mudou" class="alt" aria-labelledby="h-mudou">
+  <section id="o-que-mudou" aria-labelledby="h-mudou">
     <div class="container">
       <div class="sec-head reveal">
         <span class="badge">O que mudou</span>
@@ -344,18 +413,65 @@
     </div>
   </section>
 
+  <div class="divider"></div>
+
+  <!-- 2b. O QUE MUDA PARA VOCÊ -->
+  <section id="caminhos" class="alt" aria-labelledby="h-caminhos">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="badge">O que muda para você</span>
+        <h2 id="h-caminhos">Uma lei, <em class="hl">dois caminhos</em></h2>
+        <p>As mesmas leis tratam de forma diferente quem cria e quem vende ao público. Veja os pontos do seu perfil.</p>
+      </div>
+      <div class="caminhos">
+        <article class="caminho reveal" id="para-criador" aria-labelledby="h-criador">
+          <div class="col-head">
+            <span class="k" style="color:var(--accent)">🐾 Para quem cria</span>
+            <h3 id="h-criador">Canil, gatil e criadouro</h3>
+            <span class="when">Cães, gatos, aves, coelhos, roedores e outras espécies do § 1º, com atividade em Belo Horizonte.</span>
+          </div>
+          <ul class="items">
+            <li><span class="ref">Art. 1º-B</span><span>Reproduzir e vender só com <strong>cadastro e licença da Prefeitura</strong>, nos termos de regulamento próprio.<span class="tags"><span class="tag reg">Depende de regulamento</span></span></span></li>
+            <li><span class="ref">§ 2º</span><span><strong>Alvará de Localização e Funcionamento (ALF)</strong> e <strong>responsável técnico</strong> inscrito no conselho competente.<span class="tags"><span class="tag caso">Depende do caso</span></span></span></li>
+            <li><span class="ref">Art. 5º, VII a IX</span><span>Na venda: <strong>identificação</strong> por microchip ou outro sistema, vacina e vermífugo por protocolo veterinário e fôlder oficial.<span class="tags"><span class="tag caso">Alcance depende do caso</span></span></span></li>
+            <li><span class="ref">Art. 9º-A</span><span><strong>Proibido vender animal vivo</strong> em via pública, logradouro, espaço aberto, local de grande fluxo turístico ou espaço de exposição cultural e gastronômica.</span></li>
+            <li><span class="ref">Lei MG 25.227</span><span>Cães e gatos de raça também seguem a <strong>lei estadual</strong>, com exigências próprias.</span></li>
+          </ul>
+          <a class="btn btn-primary js-cta js-preset" data-local="caminho-criador" data-perfil="criador" href="#formulario">Diagnóstico para o meu criadouro</a>
+        </article>
+        <article class="caminho reveal" id="para-petshop" aria-labelledby="h-petshop">
+          <div class="col-head">
+            <span class="k" style="color:var(--accent)">🏪 Para quem vende ao público</span>
+            <h3 id="h-petshop">Pet shop, loja e serviços</h3>
+            <span class="when">Estabelecimentos que vendem, doam, expõem, hospedam ou cuidam de animais em Belo Horizonte.</span>
+          </div>
+          <ul class="items">
+            <li><span class="ref">Lei 11.821</span><span><strong>Já em vigor desde 2025</strong>: instalações, requisitos sanitários, inspeção diária de bem-estar e regras de venda e doação (arts. 1º a 5º).</span></li>
+            <li><span class="ref">Art. 5º, p. ún.</span><span>Proibida a venda ou doação de <strong>fêmea gestante</strong> e de animal submetido a procedimento proibido pelo CFMV.</span></li>
+            <li><span class="ref">Art. 9º</span><span>Registro de cada animal vendido por <strong>2 anos</strong>, com a documentação do <strong>criadouro de origem</strong> (CPF ou CNPJ, endereço e responsável técnico). A regularidade de quem fornece passa a pesar na sua.</span></li>
+            <li><span class="ref">Art. 5º, VII a IX</span><span><strong>Novo</strong>: identificação do animal, vacina e vermífugo por protocolo veterinário e fôlder oficial na entrega.</span></li>
+            <li><span class="ref">Art. 9º-A</span><span>Venda em loja só com as <strong>normas sanitárias, ambientais e de bem-estar do Município</strong>. A lei diz que ela pode ser <strong>gradualmente substituída por feira de adoção</strong> promovida ou autorizada pelo poder público — sem fixar prazo nem forma.<span class="tags"><span class="tag reg">Depende de regulamento</span></span></span></li>
+            <li><span class="ref">Arts. 6º a 8º</span><span>Banho e tosa, day care e hotel têm <strong>regras próprias</strong> desde 2025.</span></li>
+          </ul>
+          <a class="btn btn-primary js-cta js-preset" data-local="caminho-petshop" data-perfil="petshop" href="#formulario">Diagnóstico para o meu estabelecimento</a>
+        </article>
+      </div>
+      <p class="compare-note reveal">Como a exigência do art. 1º-B para quem “reproduz e comercializa” se combina com a venda em loja do art. 9º-A é uma questão de interpretação — tratada no diagnóstico, caso a caso.</p>
+    </div>
+  </section>
+
   <!-- 3. QUEM PODE SER AFETADO -->
   <section id="quem" aria-labelledby="h-quem">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="badge">Sua operação pode ser afetada?</span>
+        <span class="badge">Outros casos</span>
         <h2 id="h-quem">O que define é a <em class="hl">atividade</em> e o <em class="hl">lugar onde ela funciona</em></h2>
         <p>A lei não fala em tamanho do plantel. Ela trata de quem reproduz e comercializa animais domésticos em Belo Horizonte, e de estabelecimentos que vendem, doam, hospedam ou cuidam de animais.</p>
       </div>
       <div class="cards">
         <div class="card reveal"><span class="ico" aria-hidden="true">🐕</span><h3>Canil</h3><p>Reprodução e venda de cães no Município. É o público citado expressamente no art. 1º-B.</p></div>
         <div class="card reveal"><span class="ico" aria-hidden="true">🐈</span><h3>Gatil</h3><p>Reprodução e venda de gatos no Município. Mesma regra do art. 1º-B e do seu § 2º.</p></div>
-        <div class="card reveal"><span class="ico" aria-hidden="true">🦜</span><h3>Criadouro de outras espécies</h3><p>Coelhos, roedores, psitacídeos, passeriformes, galiformes e anseriformes também estão na definição de animal doméstico (§ 1º).</p></div>
+        <div class="card reveal"><span class="ico" aria-hidden="true">🦜</span><h3>Criadouro de outras espécies</h3><p>Coelhos, roedores, psitacídeos, passeriformes, galiformes e anseriformes também estão na definição de animal doméstico (§ 1º). <a href="#especies">Ver espécies</a>.</p></div>
         <div class="card reveal"><span class="ico" aria-hidden="true">🏠</span><h3>Criação em casa</h3><p>A lei não diferencia a criação pela estrutura. Como o seu caso se enquadra depende da atividade real e do regulamento.</p></div>
         <div class="card reveal"><span class="ico" aria-hidden="true">🏪</span><h3>Estabelecimento que vende ou doa</h3><p>Pet shops e lojas já estão sujeitos à Lei 11.821/2025 e passam a ter as novas regras de entrega (art. 5º, VII a IX) e do art. 9º-A.</p></div>
         <div class="card reveal"><span class="ico" aria-hidden="true">🛁</span><h3>Banho e tosa, day care, hospedagem</h3><p>Já têm regras próprias desde 2025 (arts. 6º a 8º da Lei 11.821/2025).</p></div>
@@ -378,7 +494,7 @@
       <div class="sec-head reveal">
         <span class="badge">Pontos a verificar</span>
         <h2 id="h-pontos">O que o diagnóstico <em class="hl">confere</em> na sua operação</h2>
-        <p>Cada ponto vem com o artigo correspondente e com o grau de certeza: o que está escrito na lei, o que ainda depende de regulamento e o que depende do seu caso.</p>
+        <p>Serve para criadouros e para estabelecimentos. Cada ponto vem com o artigo correspondente e com o grau de certeza: o que está escrito na lei, o que ainda depende de regulamento e o que depende do seu caso.</p>
       </div>
       <div class="legenda reveal" aria-label="Legenda">
         <span><span class="tag lei">Texto da lei</span></span>
@@ -393,6 +509,7 @@
         <div class="check reveal"><div class="check-top"><span class="tag lei">Art. 5º, VIII e IX</span><span class="tag reg">Regulamento</span><h3>Protocolo de entrega</h3></div><p>Vacinação e vermifugação conforme protocolo de médico-veterinário e fôlder informativo oficial sobre adoção e guarda responsável — o fôlder oficial ainda depende de edição pelo poder público.</p></div>
         <div class="check reveal"><div class="check-top"><span class="tag lei">Arts. 3º, V, e 9º</span><span class="tag caso">Caso</span><h3>Documentação e registros</h3></div><p>Registro de procedência e, para quem vende, registro de cada animal por 2 anos com a documentação do criadouro de origem. Contratos e documentos de entrega entram nessa conferência.</p></div>
         <div class="check reveal"><div class="check-top"><span class="tag lei">Art. 9º-A</span><h3>Onde a venda acontece</h3></div><p>Comércio de animal vivo vedado em via pública, logradouro, espaço aberto, local de grande fluxo turístico ou espaço de exposição cultural e gastronômica.</p></div>
+        <div class="check reveal"><div class="check-top"><span class="tag lei">Arts. 9º e 9º-A</span><span class="tag reg">Regulamento</span><h3>Pet shop: fornecedores e normas de venda</h3></div><p>Documentação dos criadouros de origem de cada animal vendido e adequação às normas sanitárias, ambientais e de bem-estar que o Município expedir para a venda em loja.</p></div>
         <div class="check reveal"><div class="check-top"><span class="tag lei">Lei MG 25.227/2025</span><span class="tag caso">Caso</span><h3>Relação com a lei estadual</h3></div><p>Para cães e gatos de raça, a lei estadual tem exigências próprias. O diagnóstico verifica as duas esferas sem confundir uma com a outra.</p></div>
       </div>
     </div>
@@ -407,7 +524,7 @@
         <p>Trabalho individualizado, sobre a sua atividade real — não uma lista genérica de exigências.</p>
       </div>
       <div class="steps">
-        <div class="step reveal"><h3>Você conta como funciona</h3><p>Pelo formulário ou WhatsApp: onde fica a criação, quais espécies, se há reprodução e venda e que documentos você já tem.</p></div>
+        <div class="step reveal"><h3>Você conta como funciona</h3><p>Pelo formulário ou WhatsApp: onde fica a criação ou a loja, quais espécies, se há reprodução e venda e que documentos você já tem.</p></div>
         <div class="step reveal"><h3>Diagnóstico de adequação</h3><p>Análise da sua situação frente às Leis 11.821/2025 e 12.146/2026 — e à lei estadual, quando se aplica.</p></div>
         <div class="step reveal"><h3>Plano de adequação</h3><p>O que se aplica ao seu caso, em que ordem e com quais documentos, considerando o que ainda depende de regulamento.</p></div>
         <div class="step reveal"><h3>Acompanhamento</h3><p>Orientação documental e acompanhamento da adequação, conforme o serviço contratado com a JurisDog.</p></div>
@@ -464,6 +581,18 @@
           <div class="ans"><p>As Leis 11.821/2025 e 12.146/2026 são <strong>municipais, de Belo Horizonte</strong>. A Lei 25.227/2025 é <strong>estadual, de Minas Gerais</strong>, e trata dos criadores de cães e gatos de raça em todo o estado. São normas diferentes, com exigências diferentes — uma não substitui a outra.</p></div>
         </details>
         <details>
+          <summary>Tenho pet shop em BH. O que muda para mim?</summary>
+          <div class="ans"><p>Pet shops e lojas que vendem, doam, expõem, hospedam ou cuidam de animais já estão sujeitos à <strong>Lei 11.821/2025</strong>, em vigor desde 2025: instalações, requisitos sanitários, inspeção diária, regras de venda e registro de cada animal vendido por 2 anos, com a documentação do criadouro de origem.</p><p>A Lei 12.146/2026 acrescenta, a partir de 23/01/2027, identificação do animal, protocolo de vacina e vermífugo e fôlder oficial na entrega (art. 5º, VII a IX), além do art. 9º-A.</p></div>
+        </details>
+        <details>
+          <summary>Pet shop vai poder continuar vendendo animais?</summary>
+          <div class="ans"><p>O art. 9º-A permite a venda de animal doméstico em estabelecimento comercial <strong>quando observadas as normas sanitárias, ambientais e de bem-estar animal expedidas pelo Município</strong>. O mesmo artigo diz que essa venda pode ser gradualmente substituída por feira de adoção promovida ou autorizada pelo poder público — a lei não fixa prazo nem forma para isso.</p><p>Como essa regra se combina com o art. 1º-B, que trata de quem reproduz e comercializa, é uma questão de interpretação analisada no seu caso.</p></div>
+        </details>
+        <details>
+          <summary>Crio aves, coelhos ou roedores. Estou incluído?</summary>
+          <div class="ans"><p>A definição de animal doméstico do art. 1º-B, § 1º, inclui coelho, roedor, psitacídeo, passeriforme, galiforme e anseriforme, além de cães e gatos. Se você reproduz ou vende essas espécies em Belo Horizonte, as novas regras merecem análise. Espécies silvestres da fauna brasileira seguem ainda as regras do Ibama e do órgão ambiental.</p></div>
+        </details>
+        <details>
           <summary>Crio em casa. A lei me alcança?</summary>
           <div class="ans"><p>A lei não usa critério de tamanho ou de tipo de estrutura: ela trata da reprodução e da comercialização de animais domésticos no Município por canil, gatil e criadouro. Se você reproduz e vende em BH, vale analisar o seu caso. O que exatamente será exigido depende da sua atividade real e do regulamento da Prefeitura.</p></div>
         </details>
@@ -506,7 +635,7 @@
     <div class="container">
       <div class="form-wrap">
         <span class="badge">Diagnóstico de adequação · BH</span>
-        <h2 id="h-form">Conte como funciona a sua criação</h2>
+        <h2 id="h-form">Conte como funciona a sua criação ou o seu estabelecimento</h2>
         <p>Com essas informações, a equipe da JurisDog continua o atendimento pelo WhatsApp já sabendo do seu caso.</p>
         <form id="form-bh" novalidate>
           <div class="fgrid">
@@ -521,7 +650,7 @@
               <div class="err" id="e-whats">Informe um WhatsApp válido com DDD.</div>
             </div>
             <div class="fg full">
-              <label for="f-criadouro">Nome do canil, gatil ou criadouro <span class="opt">(se houver)</span></label>
+              <label for="f-criadouro">Nome do canil, criadouro ou estabelecimento <span class="opt">(se houver)</span></label>
               <input class="fi" id="f-criadouro" name="criadouro" type="text" maxlength="80" autocomplete="organization">
             </div>
             <div class="fg">
@@ -537,23 +666,30 @@
               <div class="hint" id="h-municipio">A lei de BH vale para atividades no Município de Belo Horizonte. Sem problema: a equipe avalia sua situação pela legislação que se aplica ao seu município.</div>
             </div>
             <div class="fg">
-              <label for="f-atividade">Espécie / atividade</label>
+              <label for="f-atividade">Atividade / espécie</label>
               <select class="fi" id="f-atividade" name="atividade" required aria-describedby="e-atividade">
                 <option value="" selected disabled>Selecione…</option>
-                <option>Canil (cães)</option>
-                <option>Gatil (gatos)</option>
-                <option>Canil e gatil</option>
-                <option>Aves (psitacídeos, passeriformes e outras)</option>
-                <option>Coelhos ou roedores</option>
-                <option>Pet shop ou loja que vende animais</option>
-                <option>Banho e tosa, day care ou hospedagem</option>
-                <option>Outra atividade</option>
+                <optgroup label="Criação">
+                  <option>Canil (cães)</option>
+                  <option>Gatil (gatos)</option>
+                  <option>Canil e gatil</option>
+                  <option>Aves (calopsitas, periquitos, canários e outras)</option>
+                  <option>Galinhas, codornas, patos ou gansos</option>
+                  <option>Coelhos ou roedores</option>
+                  <option>Outra espécie</option>
+                </optgroup>
+                <optgroup label="Estabelecimento">
+                  <option>Pet shop ou loja que vende animais</option>
+                  <option>Pet shop que não vende animais</option>
+                  <option>Banho e tosa, day care ou hospedagem</option>
+                  <option>Outro estabelecimento</option>
+                </optgroup>
               </select>
               <div class="err" id="e-atividade">Selecione a atividade.</div>
             </div>
             <div class="fg full">
               <label for="f-duvida">Principal dúvida <span class="opt">(opcional)</span></label>
-              <textarea class="fi" id="f-duvida" name="duvida" maxlength="500" placeholder="Ex.: crio em casa, preciso de alvará? Como fica o microchip?"></textarea>
+              <textarea class="fi" id="f-duvida" name="duvida" maxlength="500" placeholder="Ex.: crio calopsitas em casa, preciso de alvará? Meu pet shop pode continuar vendendo filhotes?"></textarea>
             </div>
             <div class="fg full">
               <label class="consent" for="f-consent">
@@ -655,7 +791,7 @@
 
     // ---------- WhatsApp ----------
     function waUrl(texto){ return 'https://wa.me/'+WA_NUMERO+'?text='+encodeURIComponent(texto); }
-    var msgDireta = 'BH | Lei 11.821/2025 + 12.146/2026\nOlá! Vim pela página da nova lei de Belo Horizonte e quero entender o que se aplica ao meu criadouro.';
+    var msgDireta = 'BH | Lei 11.821/2025 + 12.146/2026\nOlá! Vim pela página da nova lei de Belo Horizonte e quero entender o que se aplica à minha criação ou ao meu estabelecimento.';
     function rodape(){ return '\n\n[origem: '+ORIGEM+utmTexto()+']'; }
     document.querySelectorAll('.js-wa').forEach(function(a){
       a.href = waUrl(msgDireta+rodape());
@@ -664,6 +800,26 @@
     document.querySelectorAll('.js-cta').forEach(function(a){
       a.addEventListener('click',function(){ track('cta_click',{local:a.getAttribute('data-local')||''},'CTAClick',false); });
     });
+
+    // ---------- Escolha de perfil (criador x pet shop) ----------
+    var perfilEscolhido='';
+    function marcaPerfil(p){
+      if(!p) return; perfilEscolhido=p;
+      var sel=document.getElementById('f-atividade');
+      // Pré-seleciona só quando é inequívoco (pet shop que vende); criador escolhe a espécie.
+      if(p==='petshop' && sel && !sel.value){ sel.value='Pet shop ou loja que vende animais'; }
+    }
+    document.querySelectorAll('.js-perfil').forEach(function(a){
+      a.addEventListener('click',function(){ var p=a.getAttribute('data-perfil'); marcaPerfil(p); track('perfil_select',{perfil:p},'PerfilSelect',false); });
+    });
+    document.querySelectorAll('.js-preset').forEach(function(a){
+      a.addEventListener('click',function(){ marcaPerfil(a.getAttribute('data-perfil')); });
+    });
+    function perfilDoForm(){
+      var sel=document.getElementById('f-atividade'), op=sel.options[sel.selectedIndex];
+      var g=op && op.parentNode && op.parentNode.label;
+      return g==='Estabelecimento'? 'Estabelecimento' : (g==='Criação'? 'Criador' : '');
+    }
 
     // ---------- Contagem regressiva ----------
     (function(){
@@ -746,15 +902,16 @@
         '',
         'Nome: '+form.nome.value.trim(),
         'WhatsApp informado: '+form.whatsapp.value.trim(),
-        form.criadouro.value.trim()? 'Canil/gatil/criadouro: '+form.criadouro.value.trim() : '',
+        form.criadouro.value.trim()? 'Nome do negócio: '+form.criadouro.value.trim() : '',
         'Município da atividade: '+form.municipio.value,
-        'Espécie/atividade: '+form.atividade.value,
+        'Perfil: '+(perfilDoForm()||'Não informado'),
+        'Atividade/espécie: '+form.atividade.value,
         form.duvida.value.trim()? 'Principal dúvida: '+form.duvida.value.trim() : ''
       ].filter(function(l,i){return l!==''||i===2;}).join('\n') + rodape();
       var url=waUrl(linhas);
       document.getElementById('form-ok-link').href=url;
       document.getElementById('form-ok').classList.add('show');
-      trackUmaVez('jd_bh_lead','generate_lead',{municipio:form.municipio.value,atividade:form.atividade.value},'Lead',true);
+      trackUmaVez('jd_bh_lead','generate_lead',{municipio:form.municipio.value,atividade:form.atividade.value,perfil:perfilDoForm()},'Lead',true);
       // Sem o argumento 'noopener' (com ele o navegador devolve null e abriria duas vezes).
       var w=null; try{ w=window.open(url,'_blank'); if(w){ w.opener=null; } }catch(e){}
       if(!w){ location.href=url; }
