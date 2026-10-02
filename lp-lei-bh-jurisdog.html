@@ -89,8 +89,14 @@
     .hero-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.5rem;}
     @media(min-width:700px){.hero-top{margin-bottom:2.25rem;}}
     .hero-top .tel{font-size:.85rem;color:var(--muted);text-decoration:none;}
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:start;}
-    @media(min-width:920px){.hero-grid{grid-template-columns:1.25fr .9fr;gap:3.5rem;}}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;grid-template-areas:"head" "video" "perfis" "ficha";}
+    .hero-head{grid-area:head;} .hero-perfis{grid-area:perfis;} .hero-grid .ficha{grid-area:ficha;}
+    .hero-video{grid-area:video;width:100%;max-width:280px;margin:0 auto;}
+    @media(min-width:920px){.hero-grid{grid-template-columns:1.25fr .9fr;column-gap:3.5rem;row-gap:2rem;grid-template-areas:"head video" "perfis video" "ficha video";}
+      .hero-video{position:sticky;top:1.5rem;max-width:340px;}}
+    .hero-video .vthumb{aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--border-accent);box-shadow:0 20px 60px #00000070;}
+    .hero-video .vthumb img{opacity:.92;}
+    .hero-video .vcap{margin-top:.6rem;text-align:center;font-size:.82rem;color:var(--muted);}
     .hero-eyebrow{margin-bottom:1.25rem;}
     .hero-sub{font-size:clamp(1rem,2.4vw,1.16rem);color:#c3c8bd;margin:1rem 0 1.5rem;max-width:620px;}
     .hero-sub strong{color:var(--text);}
@@ -312,12 +318,20 @@
         <a class="tel js-wa" data-local="topo" href="https://wa.me/551152423297" target="_blank" rel="noopener">WhatsApp (11) 5242-3297</a>
       </div>
       <div class="hero-grid">
-        <div>
+        <div class="hero-head">
           <div class="hero-eyebrow"><span class="badge">Leis municipais 11.821/2025 + 12.146/2026</span></div>
           <h1 id="titulo">A lei de <em class="hl">Belo Horizonte</em> mudou para quem cria e para quem vende animais.</h1>
           <p class="hero-sub">
             Reproduzir e vender <strong>cães, gatos, aves, coelhos, roedores e outras espécies</strong> em BH passa a exigir <strong>cadastro e licença da Prefeitura</strong>. Pet shops e lojas ganham <strong>novas regras de venda</strong>.
           </p>
+        </div>
+
+        <div class="hero-video">
+          <button class="vthumb" type="button" data-yt="4ZXh42jetRw" aria-label="Assistir ao vídeo do Dr. Thiago Sodré sobre a nova lei de BH"><img src="https://i.ytimg.com/vi/4ZXh42jetRw/oardefault.jpg" alt="" width="720" height="1280" fetchpriority="high"><span class="play"><span aria-hidden="true">▶</span></span></button>
+          <p class="vcap">Dr. Thiago Sodré explica o que muda · 2 min</p>
+        </div>
+
+        <div class="hero-perfis">
           <p class="perfis-label" id="perfis-label">Qual é o seu caso?</p>
           <div class="hero-ctas perfis" role="group" aria-labelledby="perfis-label">
             <a class="perfil js-perfil" data-perfil="criador" href="#para-criador"><span class="pi" aria-hidden="true">🐾</span><span><strong>Eu crio animais</strong><small>Cães, gatos, aves, coelhos, roedores</small></span><span class="seta" aria-hidden="true">→</span></a>
