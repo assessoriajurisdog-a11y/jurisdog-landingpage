@@ -468,8 +468,9 @@
   <section id="formulario" aria-labelledby="h-form">
     <div class="container">
       <div class="form-wrap">
-        <h2 id="h-form">Descubra se o seu caso tem saída</h2>
-        <p>Preencha em 30 segundos. A equipe continua pelo WhatsApp.</p>
+        <span class="badge">Diagnóstico de adequação · BH</span>
+        <h2 id="h-form">Conte como funciona a sua criação ou o seu estabelecimento</h2>
+        <p>Com essas informações, a equipe da JurisDog continua o atendimento pelo WhatsApp já sabendo do seu caso.</p>
         <form id="form-bh" novalidate>
           <div class="fgrid">
             <div class="fg">
@@ -479,23 +480,15 @@
             </div>
             <div class="fg">
               <label for="f-whats">WhatsApp com DDD</label>
-              <input class="fi" id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(31) 99999-9999" maxlength="16" required aria-describedby="e-whats">
+              <input class="fi" id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="DDD + número" maxlength="16" required aria-describedby="e-whats">
               <div class="err" id="e-whats">Informe um WhatsApp válido com DDD.</div>
             </div>
-            <div class="fg">
-              <label for="f-municipio">Cidade onde funciona</label>
-              <select class="fi" id="f-municipio" name="municipio" required aria-describedby="e-municipio h-municipio">
-                <option value="" selected disabled>Selecione…</option>
-                <option>Belo Horizonte</option>
-                <option>Outro município da Grande BH</option>
-                <option>Outro município de Minas Gerais</option>
-                <option>Fora de Minas Gerais</option>
-              </select>
-              <div class="err" id="e-municipio">Selecione a cidade.</div>
-              <div class="hint" id="h-municipio">Sem problema: avaliamos pela lei da sua cidade.</div>
+            <div class="fg full">
+              <label for="f-criadouro">Nome do canil, criadouro ou estabelecimento <span class="opt">(se houver)</span></label>
+              <input class="fi" id="f-criadouro" name="criadouro" type="text" maxlength="80" autocomplete="organization">
             </div>
-            <div class="fg">
-              <label for="f-atividade">O que você faz</label>
+            <div class="fg full">
+              <label for="f-atividade">Atividade / espécie</label>
               <select class="fi" id="f-atividade" name="atividade" required aria-describedby="e-atividade">
                 <option value="" selected disabled>Selecione…</option>
                 <optgroup label="Criação">
@@ -517,21 +510,27 @@
               <div class="err" id="e-atividade">Selecione a atividade.</div>
             </div>
             <div class="fg full">
+              <label for="f-duvida">Principal dúvida <span class="opt">(opcional)</span></label>
+              <textarea class="fi" id="f-duvida" name="duvida" maxlength="500" placeholder="Ex.: crio calopsitas em casa, preciso me adequar? Meu pet shop pode continuar vendendo filhotes?"></textarea>
+            </div>
+            <div class="fg full">
               <label class="consent" for="f-consent">
                 <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
-                <span>Autorizo a JurisDog a me responder pelo WhatsApp, conforme a <a href="https://os.jurisdog.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+                <span>Autorizo a JurisDog a usar esses dados para responder minha solicitação pelo WhatsApp, conforme a <a href="https://os.jurisdog.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
               </label>
               <div class="err" id="e-consent">É preciso autorizar o contato para continuar.</div>
             </div>
           </div>
           <div class="submit-wrap">
-            <button class="btn btn-primary" type="submit">Quero meu diagnóstico pelo WhatsApp</button>
+            <button class="btn btn-primary" type="submit">Solicitar diagnóstico pelo WhatsApp</button>
+            <small>Ao enviar, o WhatsApp abre com sua mensagem já preenchida. Seus dados não são gravados nesta página.</small>
           </div>
           <div class="form-ok" id="form-ok" role="status" aria-live="polite">
             Pronto! Confira a mensagem no WhatsApp e toque em enviar. Se o WhatsApp não abriu, <a id="form-ok-link" href="https://wa.me/551152423297" target="_blank" rel="noopener">toque aqui para abrir</a>.
           </div>
         </form>
       </div>
+      <p style="text-align:center;margin-top:1.5rem;font-size:.9rem;color:var(--muted);">Prefere conversar direto? <a class="js-wa" data-local="formulario" href="https://wa.me/551152423297" target="_blank" rel="noopener">Fale com a JurisDog no WhatsApp</a>.</p>
     </div>
   </section>
   </main>
@@ -665,8 +664,6 @@
     // ---------- Formulário ----------
     var form=document.getElementById('form-bh');
     var whats=document.getElementById('f-whats');
-    var mun=document.getElementById('f-municipio');
-    var hintMun=document.getElementById('h-municipio');
 
     form.addEventListener('focusin',function(){ trackUmaVez('jd_bh_formstart','form_start',{},'FormStart',false); });
 
@@ -679,7 +676,6 @@
       if(d.length>6) out='('+d.slice(0,2)+') '+d.slice(2,d.length===11?7:6)+'-'+d.slice(d.length===11?7:6);
       whats.value=out;
     });
-    mun.addEventListener('change',function(){ hintMun.classList.toggle('show', mun.value && mun.value!=='Belo Horizonte'); });
 
     function campoOk(el,ok){ var g=el.closest('.fg'); g.classList.toggle('invalid',!ok); el.setAttribute('aria-invalid',ok?'false':'true'); return ok; }
     function valida(){
@@ -688,13 +684,12 @@
       chk(form.nome, form.nome.value.trim().length>=2);
       var dig=form.whatsapp.value.replace(/\D/g,'');
       chk(form.whatsapp, (dig.length===10||dig.length===11) && /^[1-9]{2}/.test(dig));
-      chk(form.municipio, !!form.municipio.value);
       chk(form.atividade, !!form.atividade.value);
       chk(form.consent, form.consent.checked);
       if(primeiro) primeiro.focus();
       return ok;
     }
-    ['nome','whatsapp','municipio','atividade','consent'].forEach(function(n){
+    ['nome','whatsapp','atividade','consent'].forEach(function(n){
       form[n].addEventListener('change',function(){ if(form[n].closest('.fg').classList.contains('invalid')) valida(); });
     });
 
@@ -707,14 +702,15 @@
         '',
         'Nome: '+form.nome.value.trim(),
         'WhatsApp informado: '+form.whatsapp.value.trim(),
-        'Município da atividade: '+form.municipio.value,
+        form.criadouro.value.trim()? 'Nome do negócio: '+form.criadouro.value.trim() : '',
         'Perfil: '+(perfilDoForm()||'Não informado'),
-        'Atividade/espécie: '+form.atividade.value
+        'Atividade/espécie: '+form.atividade.value,
+        form.duvida.value.trim()? 'Principal dúvida: '+form.duvida.value.trim() : ''
       ].filter(function(l,i){return l!==''||i===2;}).join('\n') + rodape();
       var url=waUrl(linhas);
       document.getElementById('form-ok-link').href=url;
       document.getElementById('form-ok').classList.add('show');
-      trackUmaVez('jd_bh_lead','generate_lead',{municipio:form.municipio.value,atividade:form.atividade.value,perfil:perfilDoForm()},'Lead',true);
+      trackUmaVez('jd_bh_lead','generate_lead',{atividade:form.atividade.value,perfil:perfilDoForm()},'Lead',true);
       // Sem o argumento 'noopener' (com ele o navegador devolve null e abriria duas vezes).
       var w=null; try{ w=window.open(url,'_blank'); if(w){ w.opener=null; } }catch(e){}
       if(!w){ location.href=url; }
