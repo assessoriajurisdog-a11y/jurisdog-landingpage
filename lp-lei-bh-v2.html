@@ -302,10 +302,10 @@
     .btn-ghost{background:transparent;border:1px solid var(--border-accent);color:var(--text);}
     .bichos-sec{padding:2.5rem 0;background:var(--darker);text-align:center;}
     .bichos-sec h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,5vw,2.3rem);}
-    .bichos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem .6rem;max-width:980px;margin:1.6rem auto 1.1rem;}
+    .bichos{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem .5rem;max-width:760px;margin:1.6rem auto 1.1rem;}
     @media(min-width:760px){.bichos{grid-template-columns:repeat(8,1fr);}}
     .bicho{display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:.82rem;color:#d6dacf;font-weight:600;}
-    .bicho img{width:100%;max-width:120px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:16px;border:1px solid var(--border);box-shadow:0 8px 24px #0006;}
+    .bicho img{width:56px;height:56px;padding:10px;box-sizing:content-box;background:#ffffff0d;border:1px solid var(--border);border-radius:50%;}
     .bichos-sec p{color:var(--muted);font-size:.95rem;}
     .medo{padding:3rem 0;}
     .medo h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,5.4vw,2.5rem);text-align:center;margin-bottom:1.6rem;}
@@ -362,14 +362,14 @@
     <div class="container">
       <h2>Não é só <em class="hl">cão e gato</em></h2>
       <div class="bichos" aria-label="Animais alcançados pela lei">
-          <div class="bicho"><img src="img/bh-cao.webp" alt="Cães" width="240" height="240" loading="lazy"><span>Cães</span></div>
-          <div class="bicho"><img src="img/bh-gato.webp" alt="Gatos" width="240" height="240" loading="lazy"><span>Gatos</span></div>
-          <div class="bicho"><img src="img/bh-coelho.webp" alt="Coelhos" width="240" height="240" loading="lazy"><span>Coelhos</span></div>
-          <div class="bicho"><img src="img/bh-hamster.webp" alt="Roedores" width="240" height="240" loading="lazy"><span>Roedores</span></div>
-          <div class="bicho"><img src="img/bh-calopsita.webp" alt="Calopsitas" width="240" height="240" loading="lazy"><span>Calopsitas</span></div>
-          <div class="bicho"><img src="img/bh-canario.webp" alt="Canários" width="240" height="240" loading="lazy"><span>Canários</span></div>
-          <div class="bicho"><img src="img/bh-galinha.webp" alt="Galinhas" width="240" height="240" loading="lazy"><span>Galinhas</span></div>
-          <div class="bicho"><img src="img/bh-pato.webp" alt="Patos" width="240" height="240" loading="lazy"><span>Patos</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f415.svg" alt="" width="64" height="64" loading="lazy"><span>Cães</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f408.svg" alt="" width="64" height="64" loading="lazy"><span>Gatos</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f407.svg" alt="" width="64" height="64" loading="lazy"><span>Coelhos</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f439.svg" alt="" width="64" height="64" loading="lazy"><span>Roedores</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f99c.svg" alt="" width="64" height="64" loading="lazy"><span>Calopsitas</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f426.svg" alt="" width="64" height="64" loading="lazy"><span>Canários</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f414.svg" alt="" width="64" height="64" loading="lazy"><span>Galinhas</span></div>
+          <div class="bicho"><img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f986.svg" alt="" width="64" height="64" loading="lazy"><span>Patos</span></div>
       </div>
       <p>Reproduz ou vende qualquer um deles em BH? A nova lei é para você.</p>
     </div>
@@ -393,12 +393,80 @@
     </div>
   </section>
 
+  <!-- 5b. O QUE VOCÊ RECEBE -->
+  <section id="entregaveis" class="alt" aria-labelledby="h-entregaveis">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="badge">O que você recebe</span>
+        <h2 id="h-entregaveis">Documentos de adequação para a <em class="hl">Lei&nbsp;de&nbsp;BH</em></h2>
+      </div>
+      <div class="caminhos">
+        <article class="caminho reveal" aria-labelledby="h-receb-criador">
+          <div class="col-head">
+            <span class="k" style="color:var(--accent)">🐾 Para quem cria</span>
+            <h3 id="h-receb-criador">Canil, gatil e criadouro</h3>
+          </div>
+          <ul class="items">
+            <li><span class="ref">1</span><span><strong>Viabilidade do endereço e enquadramento</strong> — o primeiro documento, antes de qualquer outro.</span></li>
+            <li><span class="ref">2</span><span><strong>Conferência artigo por artigo</strong> — cada ponto da lei aplicado ao seu caso.</span></li>
+            <li><span class="ref">3</span><span><strong>Exigências sanitárias: o que tem que ser feito</strong> — cada exigência convertida em uma ação concreta.</span></li>
+            <li><span class="ref">4</span><span><strong>Declaração Simples ao Comprador</strong>.</span></li>
+            <li><span class="ref">5</span><span><strong>Atestado de Regularidade e Legalidade</strong> da JurisDog, renovado a cada 12 meses.</span></li>
+            <li><span class="ref">6</span><span><strong>Certificado e relatório de visitas</strong> do médico-veterinário particular.</span></li>
+            <li><span class="ref">7</span><span><strong>Memorial descritivo e protocolo sanitário da estrutura</strong>.</span></li>
+            <li><span class="ref">8</span><span><strong>Manual de Instrução e Manejo</strong>.</span></li>
+          </ul>
+          <a class="btn btn-primary js-cta js-preset" data-local="entregaveis-criador" data-perfil="criador" href="#formulario">Quero o diagnóstico do meu criadouro</a>
+        </article>
+        <article class="caminho reveal" aria-labelledby="h-receb-petshop">
+          <div class="col-head">
+            <span class="k" style="color:var(--accent)">🏪 Para quem vende ao público</span>
+            <h3 id="h-receb-petshop">Pet Shop, Banho e Tosa e Hospedagem</h3>
+          </div>
+          <ul class="items">
+            <li><span class="ref">1</span><span><strong>Viabilidade do endereço e enquadramento</strong> — o primeiro documento, antes de qualquer outro.</span></li>
+            <li><span class="ref">2</span><span><strong>Conferência artigo por artigo</strong> — cada ponto da lei aplicado ao seu caso.</span></li>
+            <li><span class="ref">3</span><span><strong>Exigências sanitárias: o que tem que ser feito</strong> — cada exigência convertida em uma ação concreta.</span></li>
+            <li><span class="ref">4</span><span><strong>Declaração Simples ao Comprador</strong>.</span></li>
+            <li><span class="ref">5</span><span><strong>Atestado de Regularidade e Legalidade</strong> da JurisDog, renovado a cada 12 meses.</span></li>
+            <li><span class="ref">6</span><span><strong>Certificado e relatório de visitas</strong> do médico-veterinário particular.</span></li>
+            <li><span class="ref">7</span><span><strong>Memorial descritivo e protocolo sanitário da estrutura</strong>.</span></li>
+            <li><span class="ref">8</span><span><strong>Manual de Instrução e Manejo</strong>.</span></li>
+            <li><span class="ref">9</span><span><strong>Procedência dos filhotes e do criadouro fornecedor</strong>.</span></li>
+          </ul>
+          <a class="btn btn-primary js-cta js-preset" data-local="entregaveis-petshop" data-perfil="petshop" href="#formulario">Quero o diagnóstico do meu estabelecimento</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 6. AUTORIDADE + PROVA SOCIAL -->
+  <section id="autoridade" class="alt" aria-labelledby="h-auth">
+    <div class="container">
+      <div class="auth reveal">
+        <picture>
+          <source srcset="foto-dr-thiago-480.webp" type="image/webp">
+          <img src="foto-dr-thiago-480.jpg" alt="Dr. Thiago Sodré, fundador da JurisDog" width="200" height="200" loading="lazy" decoding="async">
+        </picture>
+        <div>
+          <span class="badge">Quem conduz o diagnóstico</span>
+          <h2 id="h-auth" style="margin-top:.9rem;">Dr. Thiago Sodré e a equipe <em class="hl">JurisDog</em></h2>
+          <p>A JurisDog é uma assessoria jurídica <strong>dedicada ao mercado pet</strong>, com mais de 10 anos de atuação junto a criadores, canis, gatis e estabelecimentos do setor. Mineiro, o Dr. Thiago Sodré acompanha de perto a legislação de Minas Gerais e de Belo Horizonte.</p>
+          <p>Questões de alvará, localização e formalização são avaliadas pessoalmente por ele antes do parecer final.</p>
+        </div>
+      </div>
+      <div class="videos">
+        <div class="vcard reveal"><button class="vthumb" type="button" data-yt="c5BBzs4oI3c" aria-label="Assistir depoimento do Canil Zavanelas"><img src="https://i.ytimg.com/vi/c5BBzs4oI3c/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span aria-hidden="true">▶</span></span></button><div class="vname">Canil Zavanelas<small>Cliente JurisDog</small></div></div>
+        <div class="vcard reveal"><button class="vthumb" type="button" data-yt="bIdi7c4nzaU" aria-label="Assistir depoimento do CanilGatil Damyo"><img src="https://i.ytimg.com/vi/bIdi7c4nzaU/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span aria-hidden="true">▶</span></span></button><div class="vname">CanilGatil Damyo<small>Cliente JurisDog</small></div></div>
+        <div class="vcard reveal"><button class="vthumb" type="button" data-yt="SDBHl1Xtjzg" aria-label="Assistir depoimento do Canil Star Dogs"><img src="https://i.ytimg.com/vi/SDBHl1Xtjzg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span aria-hidden="true">▶</span></span></button><div class="vname">Canil Star Dogs<small>Cliente JurisDog</small></div></div>
+      </div>
+    </div>
+  </section>
+
   <section id="formulario" aria-labelledby="h-form">
     <div class="container">
-      <div class="prova">
-        <img src="foto-dr-thiago-480.jpg" alt="Dr. Thiago Sodré" width="56" height="56" loading="lazy">
-        <p><strong>Dr. Thiago Sodré e equipe JurisDog</strong><br>Mais de 10 anos ao lado de criadores e pet shops.</p>
-      </div>
       <div class="form-wrap">
         <h2 id="h-form">Descubra se o seu caso tem saída</h2>
         <p>Preencha em 30 segundos. A equipe continua pelo WhatsApp.</p>
@@ -480,7 +548,6 @@
         </nav>
         <p class="legal">Leis municipais de Belo Horizonte nº 11.821/2025 e nº 12.146/2026. Conteúdo informativo: não é orientação jurídica individual nem garantia de resultado. Cada caso depende da atividade, do endereço e do regulamento da Prefeitura.</p>
         <p class="fontes-mini">Fontes: <a href="https://dom-web.pbh.gov.br/visualizacao/ato/491236" target="_blank" rel="noopener">Lei 12.146/2026</a> · <a href="https://dom-web.pbh.gov.br/visualizacao/ato/454745" target="_blank" rel="noopener">Lei 11.821/2025</a> · © 2026 JurisDog</p>
-        <p class="fontes-mini">Fotos dos animais via Wikimedia Commons, recortadas: <a href="https://commons.wikimedia.org/wiki/File:Keeshond_Siberian_Husky_crossbreed_puppy.jpg" target="_blank" rel="noopener">Cães: Richard Bartz (CC BY-SA 2.5)</a> · <a href="https://commons.wikimedia.org/wiki/File:Golden_tabby_and_white_kitten_n01.jpg" target="_blank" rel="noopener">Gatos: Marie-Lan Nguyen (CC BY 2.5)</a> · <a href="https://commons.wikimedia.org/wiki/File:2018-06-22_AT_Wien_13_Hietzing,_Tiergarten_Sch%C3%B6nbrunn,_Oryctolagus_cuniculus_f._domesticus_(49019471113).jpg" target="_blank" rel="noopener">Coelhos: Paul Korecky (CC BY-SA 2.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Golden_hamster_front_1.jpg" target="_blank" rel="noopener">Roedores: Adamjennison111 at English Wikipedia (CC BY 2.5)</a> · <a href="https://commons.wikimedia.org/wiki/File:Cockatiel_(Nymphicus_hollandicus)_(9743603258).jpg" target="_blank" rel="noopener">Calopsitas: Bernard DUPONT from FRANCE (CC BY-SA 2.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Canario_paxaro.jpg" target="_blank" rel="noopener">Canários: Luis Miguel Bugallo Sánchez (CC BY-SA 3.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:20160303_-_Gallus_gallus_domesticus_4.jpg" target="_blank" rel="noopener">Galinhas: Emőke Dénes (CC BY-SA 4.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_domesticus_Palo_Alto_May_2011_001.jpg" target="_blank" rel="noopener">Patos: King of Hearts (CC BY-SA 4.0)</a>.</p>
       </div>
     </div>
   </footer>
