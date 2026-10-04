@@ -715,7 +715,7 @@
     });
 
     function campoOk(el,ok){ var g=el.closest('.fg'); g.classList.toggle('invalid',!ok); el.setAttribute('aria-invalid',ok?'false':'true'); return ok; }
-    function valida(){
+    function valida(focar){
       var ok=true, primeiro=null;
       function chk(el,cond){ var r=campoOk(el,cond); if(!r){ok=false; if(!primeiro) primeiro=el;} }
       chk(form.nome, form.nome.value.trim().length>=2);
@@ -723,11 +723,11 @@
       chk(form.whatsapp, (dig.length===10||dig.length===11) && /^[1-9]{2}/.test(dig));
       chk(form.atividade, !!form.atividade.value);
       chk(form.consent, form.consent.checked);
-      if(primeiro) primeiro.focus();
+      if(primeiro && focar!==false) primeiro.focus();
       return ok;
     }
     ['nome','whatsapp','atividade','consent'].forEach(function(n){
-      form[n].addEventListener('change',function(){ if(form[n].closest('.fg').classList.contains('invalid')) valida(); });
+      form[n].addEventListener('change',function(){ if(form[n].closest('.fg').classList.contains('invalid')) valida(false); });
     });
 
     form.addEventListener('submit',function(ev){
