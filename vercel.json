@@ -2,6 +2,11 @@
   "rewrites": [
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "petshopblindadope.jurisdog.com.br" }],
+      "destination": "/lp-petshopblindado-pe-jurisdog.html"
+    },
+    {
+      "source": "/",
       "has": [{ "type": "host", "value": "criadorblindado.jurisdog.com.br" }],
       "destination": "/lp-criadorblindado-brasil-jurisdog.html"
     },
