@@ -344,6 +344,17 @@
     .regra-cta{text-align:center;margin-top:1.4rem;}
     .regra-cta p{color:var(--muted);font-size:.95rem;max-width:620px;margin:0 auto 1rem;}
     .regra-cta .btn{width:100%;max-width:26rem;min-height:54px;}
+      .depoimentos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
+    .depoimento-card{background:var(--dark);border:1px solid var(--border);border-radius:12px;padding:1.75rem;display:flex;flex-direction:column;gap:1rem;transition:border-color .2s,transform .2s;}
+    .depoimento-card:hover{border-color:var(--border-accent);transform:translateY(-3px);}
+    .dep-stars{color:#f1c40f;font-size:.85rem;letter-spacing:.05em;}
+    .dep-text{font-size:.93rem;color:var(--text);line-height:1.75;flex:1;font-style:italic;}
+    .dep-text::before{content:'"';color:var(--accent);font-size:1.5rem;line-height:0;vertical-align:-.4em;margin-right:.1em;}
+    .dep-text::after{content:'"';color:var(--accent);font-size:1.5rem;line-height:0;vertical-align:-.4em;margin-left:.1em;}
+    .dep-author{display:flex;align-items:center;gap:.75rem;border-top:1px solid var(--border);padding-top:1rem;}
+    .dep-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#0a0d09;flex-shrink:0;}
+    .dep-name{font-weight:700;font-size:.9rem;color:var(--text);}
+    .dep-loc{font-size:.78rem;color:var(--muted);}
   </style>
 
   <script>document.documentElement.className+=' js';</script>
@@ -495,6 +506,23 @@
         <div class="vcard reveal"><button class="vthumb" type="button" data-yt="c5BBzs4oI3c" aria-label="Assistir depoimento do Canil Zavanelas"><img src="https://i.ytimg.com/vi/c5BBzs4oI3c/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span aria-hidden="true">▶</span></span></button><div class="vname">Canil Zavanelas<small>Cliente JurisDog</small></div></div>
         <div class="vcard reveal"><button class="vthumb" type="button" data-yt="bIdi7c4nzaU" aria-label="Assistir depoimento do CanilGatil Damyo"><img src="https://i.ytimg.com/vi/bIdi7c4nzaU/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span aria-hidden="true">▶</span></span></button><div class="vname">CanilGatil Damyo<small>Cliente JurisDog</small></div></div>
         <div class="vcard reveal"><button class="vthumb" type="button" data-yt="SDBHl1Xtjzg" aria-label="Assistir depoimento do Canil Star Dogs"><img src="https://i.ytimg.com/vi/SDBHl1Xtjzg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span aria-hidden="true">▶</span></span></button><div class="vname">Canil Star Dogs<small>Cliente JurisDog</small></div></div>
+      </div>
+      <div class="depoimentos-grid" style="margin-top:1.25rem;">
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Achei que estava tudo regularizado. A análise mostrou que eu não tinha dois documentos fundamentais. Se a fiscalização tivesse aparecido antes, eu poderia ter perdido tudo que construí em 12 anos.</p>
+          <div class="dep-author"><div class="dep-avatar">CC</div><div><div class="dep-name">Canil Cabe Club Kennel</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Recebi uma denúncia anônima um mês depois de fazer a análise. Mas como já tinha corrigido as falhas com a orientação da JurisDog, a fiscalização veio e foi embora sem problema nenhum.</p>
+          <div class="dep-author"><div class="dep-avatar">GA</div><div><div class="dep-name">Gatil Amycesar</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Estava criando há 7 anos sem saber que precisava de licenciamento específico para o número de animais que tenho. A análise foi um divisor de águas. Hoje opero com segurança total.</p>
+          <div class="dep-author"><div class="dep-avatar">SS</div><div><div class="dep-name">Canil Saber&amp;Saber</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
       </div>
     </div>
   </section>

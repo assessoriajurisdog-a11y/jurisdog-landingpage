@@ -151,6 +151,17 @@
     .video-dep-name{font-weight:700;font-size:.88rem;color:var(--text);display:block;}
     .video-dep-loc{font-size:.75rem;color:var(--muted);display:block;}
     .video-dep-stars{color:#f1c40f;font-size:.7rem;letter-spacing:.05em;}
+    .depoimentos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
+    .depoimento-card{background:var(--dark);border:1px solid var(--border);border-radius:12px;padding:1.75rem;display:flex;flex-direction:column;gap:1rem;transition:border-color .2s,transform .2s;}
+    .depoimento-card:hover{border-color:var(--border-accent);transform:translateY(-3px);}
+    .dep-stars{color:#f1c40f;font-size:.85rem;letter-spacing:.05em;}
+    .dep-text{font-size:.93rem;color:var(--text);line-height:1.75;flex:1;font-style:italic;}
+    .dep-text::before{content:'"';color:var(--accent);font-size:1.5rem;line-height:0;vertical-align:-.4em;margin-right:.1em;}
+    .dep-text::after{content:'"';color:var(--accent);font-size:1.5rem;line-height:0;vertical-align:-.4em;margin-left:.1em;}
+    .dep-author{display:flex;align-items:center;gap:.75rem;border-top:1px solid var(--border);padding-top:1rem;}
+    .dep-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#0a0d09;flex-shrink:0;}
+    .dep-name{font-weight:700;font-size:.9rem;color:var(--text);}
+    .dep-loc{font-size:.78rem;color:var(--muted);}
     .dep-count-bar{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;margin-top:3rem;padding:2rem;background:var(--dark);border:1px solid var(--border);border-radius:12px;}
     .dep-count-item{text-align:center;}
     .dep-count-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--accent);display:block;}
@@ -234,13 +245,23 @@
             <span class="badge badge-danger pulse">⚠ LEI 9.453/2021 — RIO DE JANEIRO</span>
           </div>
           <h1 class="hero-headline fade-up delay-2">
-            Criador do RJ: Você Sabe<br>
-            <span class="danger-word">Qual é a Sua Categoria</span><br>
-            <em>na Lei 9.453/2021?</em>
+            Criador do RJ: seu Canil, Gatil e demais Criadouros estão<br>
+            <span class="danger-word">Prontos para a Fiscalização</span>?<br>
+            <em>Torne-se um Criador Blindado</em>
           </h1>
+          <p class="hero-sub fade-up delay-3" style="margin-bottom:1rem;">
+            Você é criador de cães e gatos no Rio de Janeiro? A Lei 9.453/2021 mudou as regras, e as novas regras já estão valendo.
+            <strong>Se não se adequar, estará sujeito a multas com valores altos, ter os animais apreendidos e ser classificado como criador clandestino e praticante de maus-tratos.</strong>
+          </p>
+          <p class="hero-sub fade-up delay-3" style="margin-bottom:1rem;">
+            A lei criou 3 categorias de criadouro no Rio de Janeiro — e o seu enquadramento correto define suas obrigações, documentos e <strong>se você tem direito à isenção de alvará municipal</strong>.
+            Sem o CECRA (Cadastro Estadual de Criadores do RJ), sua operação está irregular e clandestina.
+          </p>
+          <p class="hero-sub fade-up delay-3" style="margin-bottom:1rem;">
+            A lei exige também <strong>alvarás, emissão de nota fiscal e a entrega de 7 documentos ao comprador</strong> na entrega do filhote.
+          </p>
           <p class="hero-sub fade-up delay-3">
-            A Lei 9.453/2021 criou 3 categorias de criadouro no Rio de Janeiro — e o seu enquadramento correto define suas obrigações, documentos e <strong>se você tem direito à isenção de alvará municipal</strong>.
-            Sem o CECRA (Cadastro Estadual de Criadores do RJ), sua operação está irregular.
+            Essas exigências te assustam? Emissão de nota fiscal e portar alvará? <strong>Calma! Mesmo que você possua mais de 15 animais no seu plantel, nós temos a solução, inclusive para o seu caso!</strong>
           </p>
           <div class="scarcity-block fade-up delay-3">
             <div class="scarcity-icon">🔥</div>
@@ -495,6 +516,23 @@
           </div>
         </div>
       </div>
+      <div class="depoimentos-grid" style="margin-top:1.25rem;">
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Achei que estava tudo regularizado. A análise mostrou que eu não tinha dois documentos fundamentais. Se a fiscalização tivesse aparecido antes, eu poderia ter perdido tudo que construí em 12 anos.</p>
+          <div class="dep-author"><div class="dep-avatar">CC</div><div><div class="dep-name">Canil Cabe Club Kennel</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Recebi uma denúncia anônima um mês depois de fazer a análise. Mas como já tinha corrigido as falhas com a orientação da JurisDog, a fiscalização veio e foi embora sem problema nenhum.</p>
+          <div class="dep-author"><div class="dep-avatar">GA</div><div><div class="dep-name">Gatil Amycesar</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Estava criando há 7 anos sem saber que precisava de licenciamento específico para o número de animais que tenho. A análise foi um divisor de águas. Hoje opero com segurança total.</p>
+          <div class="dep-author"><div class="dep-avatar">SS</div><div><div class="dep-name">Canil Saber&amp;Saber</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+      </div>
       <div class="dep-count-bar reveal">
         <div class="dep-count-item"><span class="dep-count-num">+4k</span><span class="dep-count-label">Criadores analisados</span></div>
         <div class="dep-count-item"><span class="dep-count-num">10+</span><span class="dep-count-label">Anos de atuação</span></div>
@@ -509,7 +547,7 @@
     <div class="container">
       <div class="autoridade-grid">
         <div class="autoridade-photo-wrap reveal">
-          <div class="autoridade-photo">⚖️</div>
+          <picture><source srcset="foto-dr-thiago-480.webp" type="image/webp"><img class="autoridade-photo" src="foto-dr-thiago-480.jpg" alt="Dr. Thiago Sodré, advogado especialista em Direito Pet" width="200" height="200" loading="lazy" style="object-fit:cover;object-position:center top;display:block;"></picture>
           <div class="cb-seal" style="width:100%;text-align:center;">
             <div class="cb-seal-title">Especialista em</div>
             <div class="cb-seal-name" style="font-size:1.2rem;">Direito Pet</div>
