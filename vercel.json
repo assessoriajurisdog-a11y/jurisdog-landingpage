@@ -2,6 +2,16 @@
   "rewrites": [
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "criadorblindado.jurisdog.com.br" }],
+      "destination": "/lp-criadorblindado-brasil-jurisdog.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "petshopblindado.jurisdog.com.br" }],
+      "destination": "/lp-petshopblindado-brasil-jurisdog.html"
+    },
+    {
+      "source": "/",
       "has": [{ "type": "host", "value": "legalizeseugatil.jurisdog.com.br" }],
       "destination": "/lp-analise-gratuita-gatil-jurisdog.html"
     },
