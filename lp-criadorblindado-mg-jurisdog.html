@@ -144,6 +144,17 @@
     .video-dep-name{font-weight:700;font-size:.88rem;color:var(--text);display:block;}
     .video-dep-loc{font-size:.75rem;color:var(--muted);display:block;}
     .video-dep-stars{color:#f1c40f;font-size:.7rem;letter-spacing:.05em;}
+    .depoimentos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
+    .depoimento-card{background:var(--dark);border:1px solid var(--border);border-radius:12px;padding:1.75rem;display:flex;flex-direction:column;gap:1rem;transition:border-color .2s,transform .2s;}
+    .depoimento-card:hover{border-color:var(--border-accent);transform:translateY(-3px);}
+    .dep-stars{color:#f1c40f;font-size:.85rem;letter-spacing:.05em;}
+    .dep-text{font-size:.93rem;color:var(--text);line-height:1.75;flex:1;font-style:italic;}
+    .dep-text::before{content:'"';color:var(--accent);font-size:1.5rem;line-height:0;vertical-align:-.4em;margin-right:.1em;}
+    .dep-text::after{content:'"';color:var(--accent);font-size:1.5rem;line-height:0;vertical-align:-.4em;margin-left:.1em;}
+    .dep-author{display:flex;align-items:center;gap:.75rem;border-top:1px solid var(--border);padding-top:1rem;}
+    .dep-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#0a0d09;flex-shrink:0;}
+    .dep-name{font-weight:700;font-size:.9rem;color:var(--text);}
+    .dep-loc{font-size:.78rem;color:var(--muted);}
     .dep-count-bar{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;margin-top:3rem;padding:2rem;background:var(--dark);border:1px solid var(--border);border-radius:12px;}
     .dep-count-item{text-align:center;}
     .dep-count-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--accent);display:block;}
@@ -228,14 +239,19 @@
             <span class="badge badge-danger pulse">⚠ LEI 25.227/2025 — MINAS GERAIS</span>
           </div>
           <h1 class="hero-headline fade-up delay-2">
-            Criador de MG: o CECAR-MG<br>
-            <span class="danger-word">É Obrigatório desde 2025</span> —<br>
-            <em>Você Está Regularizado?</em>
+            Criador de MG: seu Canil, Gatil e demais Criadouros estão<br>
+            <span class="danger-word">Prontos para a Fiscalização</span>?<br>
+            <em>Torne-se um Criador Blindado</em>
           </h1>
-          <p class="hero-sub fade-up delay-3">
+          <p class="hero-sub fade-up delay-3" style="margin-bottom:1rem;">
             A Lei 25.227/2025 criou o CECAR-MG — Cadastro Estadual de Criadores de Animais de Minas Gerais.
-            <strong>Criadores sem cadastro estão irregulares.</strong> Petshops só podem comprar de criadores registrados no CECAR-MG.
-            A fiscalização da SEMAD/MG já está em andamento.
+            <strong>Criadores sem cadastro estão irregulares e poderão sofrer punição.</strong> Petshops só podem comprar de criadores registrados no CECAR-MG.
+          </p>
+          <p class="hero-sub fade-up delay-3" style="margin-bottom:1rem;">
+            A lei exige também <strong>alvarás, emissão de nota fiscal e a entrega de 7 documentos ao comprador</strong> na entrega do filhote.
+          </p>
+          <p class="hero-sub fade-up delay-3">
+            Essas exigências te assustam? Emissão de nota fiscal e portar alvará? <strong>Calma! Nós temos a solução, inclusive para isso!</strong>
           </p>
           <div class="scarcity-block fade-up delay-3">
             <div class="scarcity-icon">🔥</div>
@@ -340,12 +356,6 @@
           </div>
         </div>
       </div>
-      <div class="dor-transition reveal">
-        <p>
-          Em MG, não ter o CECAR-MG não é só um risco jurídico —<br>
-          é <strong>perder o direito de vender para petshops</strong> no estado inteiro.
-        </p>
-      </div>
     </div>
   </section>
 
@@ -356,8 +366,8 @@
     <div class="container">
       <div class="solucao-header reveal">
         <span class="badge badge-accent">🛡️ A Solução</span>
-        <h2>Torne-se um <em style="color:var(--accent)">Criador Blindado</em> —<br>e o CECAR-MG trabalha a seu favor</h2>
-        <p>Criadores Blindados em MG são aqueles que obtiveram o CECAR-MG, organizaram a documentação exigida pela Lei 25.227/2025 e podem vender para qualquer petshop do estado com total segurança jurídica.</p>
+        <h2>Torne-se um <em style="color:var(--accent)">Criador Blindado</em></h2>
+        <p>Criadores Blindados em MG são aqueles criadores que se adequaram e organizaram a documentação exigida pela Lei 25.227/2025 e podem vender para qualquer pessoa e qualquer petshop do Estado com total segurança jurídica.</p>
       </div>
       <div style="text-align:center;margin-bottom:3rem;">
         <div class="cb-seal reveal" style="display:inline-flex;">
@@ -376,12 +386,12 @@
         <div class="beneficio-card reveal">
           <span class="beneficio-icon">📋</span>
           <h3>Regularização no CECAR-MG</h3>
-          <p>Orientação e acompanhamento em todo o processo de inscrição, documentação e aprovação no cadastro estadual.</p>
+          <p>O Governo Estadual ainda não disponibilizou o CECAR-MG, mas já está havendo fiscalização, e quem não sabe se defender está sofrendo punição. Enquanto o CECAR-MG não é disponibilizado, vamos disponibilizar um banco de dados para armazenar as informações do seu criadouro.</p>
         </div>
         <div class="beneficio-card reveal">
           <span class="beneficio-icon">🏢</span>
           <h3>CNPJ e Alvará</h3>
-          <p>Suporte para formalização jurídica: CNPJ ativo e alvará de funcionamento municipal — exigências do CECAR-MG.</p>
+          <p>O CNPJ é incontestável: todo criador precisa possuir. Temos um protocolo próprio para constituir ou alterar o seu CNPJ para pagar menos impostos e não precisar do alvará. Vamos avaliar a situação individual de cada criador.</p>
         </div>
         <div class="beneficio-card reveal">
           <span class="beneficio-icon">🏆</span>
@@ -502,6 +512,23 @@
           </div>
         </div>
       </div>
+      <div class="depoimentos-grid" style="margin-top:1.25rem;">
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Achei que estava tudo regularizado. A análise mostrou que eu não tinha dois documentos fundamentais. Se a fiscalização tivesse aparecido antes, eu poderia ter perdido tudo que construí em 12 anos.</p>
+          <div class="dep-author"><div class="dep-avatar">CC</div><div><div class="dep-name">Canil Cabe Club Kennel</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Recebi uma denúncia anônima um mês depois de fazer a análise. Mas como já tinha corrigido as falhas com a orientação da JurisDog, a fiscalização veio e foi embora sem problema nenhum.</p>
+          <div class="dep-author"><div class="dep-avatar">GA</div><div><div class="dep-name">Gatil Amycesar</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+        <div class="depoimento-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Estava criando há 7 anos sem saber que precisava de licenciamento específico para o número de animais que tenho. A análise foi um divisor de águas. Hoje opero com segurança total.</p>
+          <div class="dep-author"><div class="dep-avatar">SS</div><div><div class="dep-name">Canil Saber&amp;Saber</div><div class="dep-loc">Cliente JurisDog</div></div></div>
+        </div>
+      </div>
       <div class="dep-count-bar reveal">
         <div class="dep-count-item">
           <span class="dep-count-num">+4k</span>
@@ -570,8 +597,7 @@
     <div class="container">
       <div class="cta-final-box reveal">
         <span class="badge badge-accent">🛡️ Regularize Agora</span>
-        <h2>Obtenha o CECAR-MG<br><em style="color:var(--accent)">Antes que a SEMAD Chegue</em></h2>
-        <p>A Lei 25.227/2025 já está em vigor e a fiscalização da SEMAD/MG está ativa. Criadores sem CECAR-MG estão irregulares — e perdendo o direito de vender para petshops em Minas Gerais.</p>
+        <h2>Legalize e Regularize<br><em style="color:var(--accent)">Seu Criadouro em MG</em></h2>
 
         <div class="vagas-widget">
           <div class="vagas-widget-icon">📋</div>
