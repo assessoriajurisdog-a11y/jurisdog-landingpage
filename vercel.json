@@ -46,6 +46,11 @@
       "destination": "/lp-criadorblindado-ce-jurisdog.html"
     },
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "hotelpetblindado.jurisdog.com.br" }],
+      "destination": "/lp-hotel-creche-jurisdog.html"
+    },
+    {
       "source": "/petshop",
       "has": [{ "type": "host", "value": "legalizebh.jurisdog.com.br" }],
       "destination": "/lp-lei-bh-petshop-jurisdog.html"
