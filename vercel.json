@@ -51,6 +51,15 @@
       "destination": "/lp-hotel-creche-jurisdog.html"
     },
     {
+      "source": "/petshop",
+      "has": [{ "type": "host", "value": "legalizebh.jurisdog.com.br" }],
+      "destination": "/lp-lei-bh-petshop-jurisdog.html"
+    },
+    {
+      "source": "/lei-bh-petshop",
+      "destination": "/lp-lei-bh-petshop-jurisdog.html"
+    },
+    {
       "source": "/lei-bh",
       "destination": "/lp-lei-bh-jurisdog.html"
     },
