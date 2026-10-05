@@ -100,6 +100,32 @@
   .vant h3{margin:.6rem 0 .4rem}
   .vant p{color:var(--muted);font-size:.97rem}
 
+  /* COMECAR BLINDADO */
+  .blind-head{text-align:center;max-width:780px;margin:0 auto}
+  .blind-head h2{font-size:clamp(1.9rem,5.5vw,3rem)}
+  .trilhas{display:grid;gap:1.2rem;margin-top:2.2rem}
+  @media(min-width:820px){.trilhas{grid-template-columns:1fr 1fr}}
+  .trilha{border-radius:18px;padding:1.6rem 1.4rem}
+  .trilha.errada{background:linear-gradient(160deg,#1c0f0d,#110c0b);border:1px solid #e74c3c55}
+  .trilha.certa{background:linear-gradient(160deg,#112110,#0b130a);border:2px solid var(--accent);box-shadow:0 0 40px #7ec85022}
+  .trilha .tt{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem}
+  .trilha.errada .tt{color:var(--red)} .trilha.certa .tt{color:var(--accent)}
+  .trilha h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:1.2rem}
+  .passo{display:flex;gap:.9rem;align-items:flex-start;position:relative;padding-bottom:1.15rem}
+  .passo:nth-last-child(2){padding-bottom:0}
+  .passo:not(:nth-last-child(2))::after{content:'';position:absolute;left:17px;top:38px;bottom:4px;width:2px}
+  .trilha.errada .passo:not(:nth-last-child(2))::after{background:#e74c3c55}
+  .trilha.certa .passo:not(:nth-last-child(2))::after{background:#7ec85055}
+  .passo .b{flex:0 0 36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem}
+  .trilha.errada .b{background:#e74c3c22;color:var(--red);border:1px solid #e74c3c88}
+  .trilha.certa .b{background:#7ec85022;color:var(--accent);border:1px solid #7ec85088}
+  .passo p{margin:0;font-size:1rem;color:var(--text)}
+  .passo p small{display:block;color:var(--muted);font-size:.92rem;margin-top:.15rem}
+  .trilha .fim{margin-top:1.3rem;padding:1rem 1.1rem;border-radius:12px;font-weight:800;font-size:1.08rem;text-align:center}
+  .trilha.errada .fim{background:#e74c3c1f;color:#ff8a7e;border:1px dashed #e74c3c88}
+  .trilha.certa .fim{background:#7ec8501f;color:var(--accent);border:1px dashed #7ec85088}
+  .blind-nota{max-width:760px;margin:1.8rem auto 0;text-align:center;color:var(--muted);font-size:.95rem}
+
   /* COMPARATIVO */
   .compara{display:grid;gap:1rem;margin-top:2rem}
   @media(min-width:760px){.compara{grid-template-columns:1fr 1fr}}
@@ -250,7 +276,7 @@
           <span class="badge">🐾 Formação Criador 360 · Turma Fundadora</span>
           <p class="hero-kicker">Da ideia ao primeiro criadouro profissional.</p>
           <h1>Quer viver da criação de cães e gatos de raça? <span class="red">Antes de gastar o primeiro real,</span> <em class="hl">aprenda a montar o seu criadouro do jeito certo.</em></h1>
-          <p class="lead">Ao final da formação, você terá o <strong>projeto completo do seu criadouro</strong>: a raça escolhida com critério, quanto vai custar, o que precisa comprar, como montar a estrutura, como formar o plantel, como vender e como se proteger — <strong>antes de gastar o primeiro real errado.</strong></p>
+          <p class="lead">Ao final da formação, você terá o <strong>projeto completo do seu criadouro</strong>: a raça escolhida com critério, quanto vai custar, o que precisa comprar, como montar a estrutura, como formar o plantel, como vender e como se proteger — <strong>começando do zero já blindado, antes de gastar o primeiro real errado.</strong></p>
           <div class="hero-ctas">
             <a href="#formulario" class="btn js-cta" data-local="hero">Quero entrar na Turma Fundadora →</a>
             <span class="microcopy">🔒 Encontros ao vivo toda semana com o Dr. Thiago Sodré · 7 dias de garantia</span>
@@ -300,6 +326,41 @@
         <div class="erro reveal"><div class="n">04</div><h3>A venda sem contrato</h3><p>O comprador volta meses depois dizendo que o filhote "já veio doente". Sem prova e sem contrato, quem paga a conta é você.</p></div>
       </div>
       <p class="reveal center" style="margin-top:2.2rem;font-size:1.1rem">A JurisDog conhece esses erros de perto porque <b>atende todos os dias o criador que começou errado.</b> Por isso criamos o Criador 360: para você começar certo.</p>
+    </div>
+  </section>
+
+  <!-- 3B. COMECAR DO ZERO JA BLINDADO -->
+  <section class="alt" id="blindado">
+    <div class="container">
+      <div class="blind-head reveal">
+        <span class="eyebrow">O ponto que muda tudo</span>
+        <h2>Comece do zero <em class="hl">já blindado.</em><br><span style="color:var(--red)">Não depois do prejuízo.</span></h2>
+        <p class="lead" style="margin:1rem auto 0">A maioria faz na ordem errada: <b style="color:var(--text)">primeiro constrói, depois descobre as regras.</b> Quando a fiscalização chega, a obra já está pronta, os animais já estão lá — e cada correção vira um novo gasto.</p>
+      </div>
+      <div class="trilhas">
+        <div class="trilha errada reveal">
+          <div class="tt">⚠️ O efeito dominó</div>
+          <h3>Quem começa errado</h3>
+          <div class="passo"><span class="b">1</span><p>Constrói o canil ou gatil no impulso<small>Sem saber se a atividade é permitida naquele local nem quais exigências valem no seu Estado e município.</small></p></div>
+          <div class="passo"><span class="b">2</span><p>Compra as matrizes e começa a criar<small>O dinheiro guardado já foi quase todo para a obra e para os animais.</small></p></div>
+          <div class="passo"><span class="b">3</span><p>Chega a denúncia ou a fiscalização<small>Vizinho reclama, um órgão aparece — e a documentação não existe.</small></p></div>
+          <div class="passo"><span class="b">4</span><p>Notificação, multa, interdição ou embargo<small>A atividade pode ser paralisada até tudo ser corrigido.</small></p></div>
+          <div class="passo"><span class="b">5</span><p>Obra refeita, ninhadas paradas, animais sem lugar<small>E a conta continua chegando enquanto nada é vendido.</small></p></div>
+          <div class="fim">Resultado: prejuízo atrás de prejuízo.</div>
+        </div>
+        <div class="trilha certa reveal">
+          <div class="tt">🛡️ Criador Blindado desde o primeiro dia</div>
+          <h3>Quem começa com o Criador 360</h3>
+          <div class="passo"><span class="b">1</span><p>Antes de qualquer obra, confere o local e as regras<small>Você sabe o que vale para a sua cidade e o seu Estado antes de gastar.</small></p></div>
+          <div class="passo"><span class="b">2</span><p>Projeta a estrutura já dentro das exigências<small>Maternidade, isolamento, higiene e bem-estar pensados uma única vez — sem refazer.</small></p></div>
+          <div class="passo"><span class="b">3</span><p>Organiza documentos e cadastros desde o começo<small>O kit documental do criadouro fica pronto antes do primeiro animal chegar.</small></p></div>
+          <div class="passo"><span class="b">4</span><p>Vende com contrato, garantia e pós-venda<small>Cada filhote sai protegido, com prova de como foi entregue.</small></p></div>
+          <div class="passo"><span class="b">5</span><p>Se a fiscalização chegar, você está pronto<small>Documentação em ordem para apresentar — sem susto e sem improviso.</small></p></div>
+          <div class="fim">Resultado: você constrói uma vez só — e protegido.</div>
+        </div>
+      </div>
+      <p class="blind-nota reveal">As exigências variam de Estado para Estado e de município para município. Na formação você aprende a identificar as que valem para o seu caso — e, quando precisar, tem a equipe jurídica da JurisDog ao seu lado.</p>
+      <div class="center reveal" style="margin-top:1.6rem"><a href="#formulario" class="btn js-cta" data-local="blindado">Quero começar já blindado →</a></div>
     </div>
   </section>
 
