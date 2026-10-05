@@ -334,8 +334,8 @@
     .fiscal li{display:grid;grid-template-columns:1.6rem 1fr;gap:.55rem;align-items:start;font-size:.93rem;color:#d6dacf;}
     .fiscal li .q{display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:50%;background:#ff475722;border:1px solid #ff475766;color:#ff8a94;font-weight:800;font-size:.8rem;}
     .fiscal .pe{margin-top:.95rem;font-size:.88rem;color:#ffd9a8;font-weight:600;}
-    @media(min-width:920px){.fiscal{grid-row:span 2;}}
-    @media(max-width:919px){.hero-ctas{order:2;}.fiscal{order:3;}}
+    .fiscal-sec{padding:0 0 2.5rem;}
+    .fiscal-sec .fiscal{max-width:640px;margin:0 auto;}
     .regra{max-width:900px;margin:2rem auto 0;display:grid;gap:.9rem;}
     @media(min-width:760px){.regra{grid-template-columns:1fr 1fr;}}
     .regra .cx{background:#1a1508;border:1px solid #e0a93b66;border-radius:14px;padding:1.1rem 1.2rem;}
@@ -365,7 +365,21 @@
           <h1>Você cuida do animal dos outros. <em class="hl">Se algo der errado, a sua documentação te defende?</em></h1>
           <p class="sub">Fiscalização da Prefeitura, da Vigilância Sanitária ou do Conselho de Veterinária, reclamação de tutor, fuga, briga, animal que ninguém busca. Quem guarda animal de cliente <strong>precisa provar como cuidou dele</strong> — e isso se faz com documento, antes do problema.</p>
         </div>
-        <div class="fiscal" aria-labelledby="h-fiscal">
+        <div class="h2-video">
+          <button class="vthumb" type="button" data-yt="Y0mngW5q98w" aria-label="Assistir ao vídeo do Dr. Thiago Sodré sobre hotel e creche pet"><img src="https://i.ytimg.com/vi/Y0mngW5q98w/maxresdefault.jpg" alt="" width="1280" height="720" fetchpriority="high"><span class="play"><span aria-hidden="true">▶</span></span></button>
+          <p class="vcap">Dr. Thiago Sodré explica</p>
+        </div>
+        <div class="hero-ctas" role="group" aria-label="Escolha o seu caso">
+          <a class="btn btn-primary js-cta js-preset" data-local="hero-hotel" data-servico="Hotel / hospedagem" href="#formulario">Tenho hotel — quero meu diagnóstico</a>
+          <a class="btn btn-ghost js-cta js-preset" data-local="hero-creche" data-servico="Creche / day care" href="#formulario">Tenho creche ou day care</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fiscal-sec" aria-label="O que o fiscal pede">
+    <div class="container">
+      <div class="fiscal" aria-labelledby="h-fiscal">
           <h3 id="h-fiscal">O fiscal chegou. Você tem isso em mãos agora?</h3>
           <p class="s">Responda de cabeça, sem procurar:</p>
           <ul>
@@ -378,11 +392,6 @@
           </ul>
           <p class="pe">Faltou um item? É exatamente aí que começa o problema.</p>
         </div>
-        <div class="hero-ctas" role="group" aria-label="Escolha o seu caso">
-          <a class="btn btn-primary js-cta js-preset" data-local="hero-hotel" data-servico="Hotel / hospedagem" href="#formulario">Tenho hotel — quero meu diagnóstico</a>
-          <a class="btn btn-ghost js-cta js-preset" data-local="hero-creche" data-servico="Creche / day care" href="#formulario">Tenho creche ou day care</a>
-        </div>
-      </div>
     </div>
   </section>
 
