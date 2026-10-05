@@ -2,6 +2,15 @@
   "rewrites": [
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "criador360.jurisdog.com.br" }],
+      "destination": "/lp-criador360-jurisdog.html"
+    },
+    {
+      "source": "/criador-360",
+      "destination": "/lp-criador360-jurisdog.html"
+    },
+    {
+      "source": "/",
       "has": [{ "type": "host", "value": "petshopblindadope.jurisdog.com.br" }],
       "destination": "/lp-petshopblindado-pe-jurisdog.html"
     },
