@@ -6,6 +6,10 @@
       "destination": "/lp-criador360-jurisdog.html"
     },
     {
+      "source": "/criador-360-completa",
+      "destination": "/lp-criador360-completa-jurisdog.html"
+    },
+    {
       "source": "/criador-360",
       "destination": "/lp-criador360-jurisdog.html"
     },
