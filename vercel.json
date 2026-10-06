@@ -2,16 +2,29 @@
   "rewrites": [
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "criadorfaixapreta.jurisdog.com.br" }],
+      "destination": "/lp-criadorfaixapreta-jurisdog.html"
+    },
+    {
+      "source": "/criador-faixa-preta-completa",
+      "destination": "/lp-criadorfaixapreta-completa-jurisdog.html"
+    },
+    {
+      "source": "/criador-faixa-preta",
+      "destination": "/lp-criadorfaixapreta-jurisdog.html"
+    },
+    {
+      "source": "/",
       "has": [{ "type": "host", "value": "criador360.jurisdog.com.br" }],
-      "destination": "/lp-criador360-jurisdog.html"
+      "destination": "/lp-criadorfaixapreta-jurisdog.html"
     },
     {
       "source": "/criador-360-completa",
-      "destination": "/lp-criador360-completa-jurisdog.html"
+      "destination": "/lp-criadorfaixapreta-completa-jurisdog.html"
     },
     {
       "source": "/criador-360",
-      "destination": "/lp-criador360-jurisdog.html"
+      "destination": "/lp-criadorfaixapreta-jurisdog.html"
     },
     {
       "source": "/",
